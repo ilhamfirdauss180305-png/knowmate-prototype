@@ -1,0 +1,6523 @@
+/* =========================================================
+   KNOWMATE
+   DASHBOARD STYLE
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIABLE WARNA
+   ========================================================= */
+
+:root {
+
+    --purple: #7b3f91;
+    --purple-dark: #5d2d70;
+    --purple-light: #c995d9;
+
+    --pink: #e99bc5;
+    --pink-light: #f2c7df;
+
+    --background: #fbf1fc;
+
+    --white: #ffffff;
+
+    --text: #28232a;
+    --text-light: #6f6671;
+
+    --purple-card: #bd7bd1;
+    --pink-card: #cf6d98;
+    --blue-card: #aeb4df;
+    --yellow-card: #f2d76d;
+    --teal-card: #98ced1;
+    --coral-card: #eca19b;
+
+    --shadow:
+        0 6px 14px rgba(84, 42, 98, 0.18);
+
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+select,
+input {
+
+    font-family: inherit;
+
+}
+
+
+/* =========================================================
+   3. MOBILE HEADER
+   ========================================================= */
+
+.mobile-header {
+
+    display: none;
+
+}
+
+/* =========================================
+   GLOBAL KNOWMATE SIDEBAR
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+
+    width: 225px;
+
+    padding: 20px 15px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 2px solid #815098;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    box-shadow: 0 5px 15px rgba(74, 38, 88, 0.05);
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.sidebar-logo {
+    position: relative;
+
+    padding: 2px 10px 15px;
+
+    margin-bottom: 15px;
+
+    color: #b35bc4;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 31px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-align: left;
+}
+
+
+/* GARIS DI BAWAH LOGO */
+
+.sidebar-logo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: #815098;
+}
+
+
+/* =========================================
+   MENU
+   ========================================= */
+
+.sidebar-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+
+.sidebar-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    color: #302a32;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+
+.sidebar-link span {
+    width: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* HOVER */
+
+.sidebar-link:hover {
+    background: #f2e4f6;
+
+    color: #6e397f;
+}
+
+
+/* MENU AKTIF */
+
+.sidebar-link.active {
+    background: #dfc1ec;
+
+    color: #51315d;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   KELUAR
+   ========================================= */
+
+.logout-link {
+    position: relative;
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    border-radius: 0;
+
+}
+
+
+/* GARIS SEBELUM KELUAR */
+
+.logout-link::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+
+    top: 0;
+
+    height: 2px;
+
+    background: #815098;
+}
+
+
+.logout-link:hover {
+    background: transparent;
+
+    color: #7b3f91;
+}
+
+
+/* =========================================================
+   5. MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+    margin-left: 265px;
+
+    min-height: 100vh;
+
+    padding: 20px 25px;
+
+    box-sizing: border-box;
+
+    background: #fbf1fc;
+}
+
+
+/* =========================================================
+   6. WELCOME HEADER
+   ========================================================= */
+
+.welcome-section {
+
+    min-height: 105px;
+
+    padding: 15px 25px;
+
+    border-radius: 16px;
+
+    background:
+
+        linear-gradient(
+
+            100deg,
+
+            #dca6e7,
+
+            #e8b9df
+
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.welcome-text h1 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 26px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+}
+
+
+.welcome-text p {
+
+    font-size: 17px;
+
+    margin-top: 2px;
+
+}
+
+
+/* =========================================================
+   7. ILUSTRASI LAPTOP
+   ========================================================= */
+
+.welcome-illustration {
+
+    width: 150px;
+
+    height: 90px;
+
+    position: relative;
+
+    margin-right: 20px;
+
+}
+
+
+.laptop {
+
+    position: absolute;
+
+    width: 105px;
+
+    height: 65px;
+
+    right: 15px;
+
+    top: 2px;
+
+}
+
+
+.laptop-screen {
+
+    width: 92px;
+
+    height: 58px;
+
+    background: #dbe2ef;
+
+    border: 4px solid #4d5064;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.screen-book {
+
+    font-size: 25px;
+
+}
+
+
+.laptop-base {
+
+    width: 115px;
+
+    height: 8px;
+
+    background: #606377;
+
+    border-radius: 0 0 12px 12px;
+
+    margin-left: -10px;
+
+}
+
+
+/* =========================================================
+   8. SEARCH AREA
+   ========================================================= */
+
+.search-area {
+
+    display: grid;
+
+    grid-template-columns:
+
+        minmax(200px, 1fr)
+
+        minmax(200px, 1fr)
+
+        120px;
+
+    gap: 15px;
+
+    align-items: end;
+
+    margin-top: 25px;
+
+}
+
+
+.search-field label {
+
+    display: block;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.search-field select {
+
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 14px;
+
+    background: white;
+
+    border: 2px solid #9b63a9;
+
+    border-radius: 14px;
+
+    color: #514951;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.search-field select:focus {
+
+    border-color: var(--purple);
+
+}
+
+
+/* SEARCH BUTTON */
+
+.search-button {
+
+    height: 43px;
+
+    background: var(--purple);
+
+    color: white;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.2s ease;
+
+}
+
+
+.search-button:hover {
+
+    background: var(--purple-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+.search-icon {
+
+    font-size: 21px;
+
+    vertical-align: -2px;
+
+    margin-right: 4px;
+
+}
+
+
+/* =========================================================
+   9. SEMESTER
+   ========================================================= */
+
+.semester-section {
+
+    margin-top: 12px;
+
+}
+
+
+.section-title {
+
+    display: inline-block;
+
+    background: #dfc0e8;
+
+    padding: 3px 14px;
+
+    border-radius: 14px;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.semester-list {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 6px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.semester-button {
+
+    padding: 6px 15px;
+
+    background: #e5abd5;
+
+    color: var(--purple-dark);
+
+    border: 0;
+
+    border-radius: 18px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.semester-button:hover {
+
+    background: #d797cc;
+
+}
+
+
+.semester-button.active {
+
+    background: var(--purple);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   10. REKOMENDASI
+   ========================================================= */
+
+.recommendation-section {
+
+    margin-top: 10px;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 8px;
+
+}
+
+
+.section-heading h2 {
+
+    display: inline-block;
+
+    background: #dfc0e8;
+
+    padding: 3px 14px;
+
+    border-radius: 14px;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+/* =========================================================
+   11. BOOK CONTAINER
+========================================================= */
+
+.book-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(130px, 1fr));
+
+    gap: 16px;
+
+    padding-top: 55px;
+}
+
+
+/* =========================================================
+   12. BOOK CARD
+========================================================= */
+
+.book-card {
+    position: relative;
+
+    height: 184px;
+
+    background: #ffffff;
+
+    border: 2px solid #815098;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 12px rgba(74, 38, 88, 0.20);
+
+    overflow: visible;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.book-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 11px 18px rgba(74, 38, 88, 0.25);
+}
+
+
+/* =========================================================
+   13. COVER BUKU
+========================================================= */
+
+.book-cover {
+    position: absolute;
+
+    top: -55px;
+
+    left: 19px;
+    right: 19px;
+
+    height: 114px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   WARNA COVER
+========================================================= */
+
+.cover-purple {
+    background: #bd78d0;
+}
+
+.cover-pink {
+    background: #d66c98;
+}
+
+.cover-blue {
+    background: #a9addb;
+}
+
+.cover-yellow {
+    background: #f4d76c;
+}
+
+.cover-teal {
+    background: #94ced1;
+}
+
+.cover-coral {
+    background: #ee9f99;
+}
+
+
+/* =========================================================
+   BENTUK LIPATAN PUTIH
+========================================================= */
+
+.book-cover::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 32px;
+    height: 27px;
+
+    background: #ffffff;
+
+    border-radius:
+        0 15px 0 0;
+}
+
+
+/* =========================================================
+   DESAIN GARIS BUKU
+========================================================= */
+
+.book-design {
+    position: absolute;
+
+    left: 14px;
+
+    bottom: -9px;
+
+    width: 82px;
+
+    height: 34px;
+}
+
+
+/* GARIS */
+
+.book-line {
+    position: absolute;
+
+    height: 3px;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+}
+
+
+/* GARIS ATAS */
+
+.line-one {
+    width: 72px;
+
+    top: 5px;
+
+    left: 8px;
+}
+
+
+/* GARIS BAWAH */
+
+.line-two {
+    width: 52px;
+
+    top: 16px;
+
+    left: 18px;
+}
+
+
+/* =========================================================
+   14. INFORMASI BUKU
+========================================================= */
+
+.book-information {
+    position: absolute;
+
+    left: 13px;
+    right: 13px;
+
+    bottom: 9px;
+
+    z-index: 5;
+}
+
+
+.book-information h3 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    margin-bottom: 3px;
+}
+
+
+.book-information p {
+    font-size: 9px;
+
+    color: #55505a;
+}
+
+
+.book-information span {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    padding: 3px 18px;
+
+    min-width: 72px;
+
+    text-align: center;
+
+    background: #dfc1e8;
+
+    border-radius: 10px;
+
+    color: #563062;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   WARNA LABEL TAHUN SESUAI COVER
+========================================================= */
+
+.book-card:nth-child(2)
+.book-information span {
+    background: #f0bad5;
+}
+
+.book-card:nth-child(3)
+.book-information span {
+    background: #c6c8e7;
+}
+
+.book-card:nth-child(4)
+.book-information span {
+    background: #f7dfa0;
+}
+
+.book-card:nth-child(5)
+.book-information span {
+    background: #b8dcde;
+}
+
+.book-card:nth-child(6)
+.book-information span {
+    background: #f2b9b5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .book-container {
+        grid-template-columns:
+            repeat(4, minmax(130px, 1fr));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .book-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+
+        padding-top: 50px;
+    }
+
+    .book-card {
+        height: 175px;
+    }
+
+    .book-cover {
+        top: -51px;
+
+        left: 14px;
+        right: 14px;
+
+        height: 105px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .book-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+        padding-top: 48px;
+    }
+
+    .book-card {
+        height: 170px;
+    }
+
+    .book-cover {
+        top: -48px;
+
+        left: 12px;
+        right: 12px;
+
+        height: 100px;
+    }
+
+    .book-information {
+        left: 9px;
+        right: 9px;
+    }
+
+    .book-information h3 {
+        font-size: 10px;
+    }
+
+    .book-information p {
+        font-size: 8px;
+    }
+
+    .book-information span {
+        font-size: 7px;
+
+        padding: 3px 14px;
+    }
+
+}
+
+
+/* =========================================================
+   15. TAMBAH REFERENSI
+   ========================================================= */
+
+.add-reference-button {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 25px;
+
+    width: 72px;
+
+    height: 72px;
+
+    background: #d86eb5;
+
+    border: 3px solid #f4b9db;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 5px 15px
+        rgba(112, 49, 102, .25);
+
+    transition: 0.2s ease;
+
+    z-index: 50;
+
+}
+
+
+.add-reference-button:hover {
+
+    transform: scale(1.07);
+
+}
+
+
+.plus {
+
+    font-size: 28px;
+
+    line-height: 20px;
+
+    font-weight: 300;
+
+}
+
+
+.add-reference-text {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   16. TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .sidebar {
+
+        width: 185px;
+
+        left: 18px;
+
+    }
+
+
+    .main-content {
+
+        margin-left: 225px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .book-container {
+
+        grid-template-columns:
+
+            repeat(
+
+                4,
+
+                minmax(130px, 1fr)
+
+            );
+
+    }
+
+
+}
+
+
+/* =========================================================
+   17. MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+
+    /* MOBILE HEADER */
+
+    .mobile-header {
+
+        display: flex;
+
+        position: sticky;
+
+        top: 0;
+
+        height: 60px;
+
+        background: white;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 0 16px;
+
+        z-index: 200;
+
+        box-shadow:
+            0 3px 12px
+            rgba(0,0,0,.08);
+
+    }
+
+
+    .menu-button {
+
+        background: transparent;
+
+        font-size: 25px;
+
+        color: var(--purple);
+
+        cursor: pointer;
+
+    }
+
+
+    .mobile-logo {
+
+        font-family: "Baloo 2", sans-serif;
+
+        font-size: 28px;
+
+        font-weight: 800;
+
+        color: #c45fd3;
+
+    }
+
+
+    .mobile-profile {
+
+        color: var(--purple);
+
+        font-size: 23px;
+
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+
+        top: 65px;
+
+        left: 10px;
+
+        bottom: 10px;
+
+        width: 200px;
+
+        transform: translateX(-120%);
+
+        transition: .25s ease;
+
+    }
+
+
+    .sidebar.open {
+
+        transform: translateX(0);
+
+    }
+
+
+    /* MAIN */
+
+    .main-content {
+
+        margin-left: 0;
+
+        padding:
+
+            15px
+
+            15px
+
+            100px;
+
+    }
+
+
+    /* HEADER */
+
+    .welcome-section {
+
+        min-height: 100px;
+
+        padding: 16px;
+
+    }
+
+
+    .welcome-text h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .welcome-text p {
+
+        font-size: 13px;
+
+    }
+
+
+    .welcome-illustration {
+
+        display: none;
+
+    }
+
+
+    /* SEARCH */
+
+    .search-area {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 18px;
+
+    }
+
+
+    .search-button {
+
+        width: 100%;
+
+    }
+
+
+    /* BOOK */
+
+    .book-container {
+
+        grid-template-columns:
+
+            repeat(
+
+                3,
+
+                1fr
+
+            );
+
+        gap: 10px;
+
+    }
+
+
+    .book-cover {
+
+        height: 105px;
+
+        margin-left: 10px;
+
+        margin-right: 10px;
+
+    }
+
+
+    .book-information {
+
+        padding: 7px;
+
+    }
+
+
+    .book-information h3 {
+
+        font-size: 10px;
+
+    }
+
+
+    .book-symbol {
+
+        font-size: 32px;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   18. HP KECIL
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .book-container {
+
+        grid-template-columns:
+
+            repeat(
+
+                2,
+
+                1fr
+
+            );
+
+    }
+
+
+    .semester-list {
+
+        gap: 6px;
+
+    }
+
+
+    .semester-button {
+
+        padding:
+
+            6px 10px;
+
+        font-size: 10px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .section-title {
+
+        font-size: 16px;
+
+    }
+
+
+    .add-reference-button {
+
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+
+}
+
+/* =========================================
+   LANDING PAGE
+   ========================================= */
+
+.landing-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #fbf1fc;
+    color: #28232a;
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+
+.landing-navbar {
+    width: 100%;
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ead7ee;
+}
+
+.landing-logo {
+    font-family: "Baloo 2", cursive;
+    font-size: 34px;
+    font-weight: 800;
+    color: #7b3f91;
+}
+
+.landing-nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.landing-login,
+.landing-register {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.landing-login {
+    color: #7b3f91;
+}
+
+.landing-login:hover {
+    background: #f3e5f7;
+}
+
+.landing-register {
+    color: white;
+    background: #7b3f91;
+    box-shadow: 0 5px 12px rgba(123, 63, 145, 0.2);
+}
+
+.landing-register:hover {
+    background: #5d2d70;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.landing-hero {
+    width: 86%;
+    max-width: 1200px;
+    min-height: 570px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.landing-content {
+    padding: 50px 0;
+}
+
+.landing-label {
+    display: inline-block;
+    padding: 8px 17px;
+    margin-bottom: 18px;
+    border-radius: 20px;
+    background: #ead7f0;
+    color: #6c397d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.landing-content h1 {
+    margin: 0;
+    max-width: 620px;
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #332638;
+}
+
+.landing-content h1 span {
+    color: #a657b9;
+}
+
+.landing-content > p {
+    max-width: 560px;
+    margin: 22px 0 30px;
+    color: #706773;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.landing-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.landing-main-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 13px;
+    background: #7b3f91;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 7px 16px rgba(123, 63, 145, 0.22);
+    transition: 0.2s ease;
+}
+
+.landing-main-button:hover {
+    background: #5d2d70;
+    transform: translateY(-2px);
+}
+
+.landing-text-button {
+    color: #7b3f91;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.landing-text-button:hover {
+    text-decoration: underline;
+}
+
+/* HERO ILLUSTRATION */
+
+.landing-illustration {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-circle {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: linear-gradient(
+        145deg,
+        #f2c7df,
+        #d9b7e7
+    );
+}
+
+.landing-book {
+    position: relative;
+    width: 270px;
+    height: 205px;
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 15px 20px rgba(78, 45, 89, 0.2));
+}
+
+.landing-book-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 185px;
+    height: 205px;
+    border-radius: 12px 5px 5px 12px;
+    background: linear-gradient(
+        145deg,
+        #9d55b0,
+        #713a89
+    );
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.landing-book-cover::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.2);
+}
+
+.landing-book-title {
+    color: white;
+    font-family: "Baloo 2", cursive;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 25px;
+}
+
+.landing-book-line {
+    width: 85px;
+    height: 4px;
+    margin-top: 18px;
+    border-radius: 5px;
+    background: white;
+}
+
+.landing-book-line.small {
+    width: 60px;
+    margin-top: 9px;
+    opacity: 0.7;
+}
+
+.landing-book-page {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 100px;
+    height: 190px;
+    border-radius: 4px 13px 13px 4px;
+    background: #fff;
+    padding: 35px 18px;
+    box-sizing: border-box;
+}
+
+.landing-book-page div {
+    height: 5px;
+    margin-bottom: 13px;
+    border-radius: 5px;
+    background: #e4d7e8;
+}
+
+.landing-book-page div:nth-child(1) {
+    width: 70px;
+}
+
+.landing-book-page div:nth-child(2) {
+    width: 52px;
+}
+
+.landing-book-page div:nth-child(3) {
+    width: 65px;
+}
+
+/* FLOATING ELEMENTS */
+
+.landing-floating {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(84, 42, 98, 0.15);
+    font-size: 24px;
+}
+
+.floating-one {
+    top: 70px;
+    right: 60px;
+}
+
+.floating-two {
+    bottom: 70px;
+    left: 65px;
+}
+
+/* INFO CARDS */
+
+.landing-info {
+    width: 86%;
+    max-width: 1200px;
+    margin: 20px auto 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.landing-info-card {
+    padding: 26px;
+    background: white;
+    border: 1px solid #ead7ee;
+    border-radius: 18px;
+    box-shadow: 0 7px 18px rgba(84, 42, 98, 0.07);
+}
+
+.landing-info-card span {
+    color: #a657b9;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.landing-info-card h3 {
+    margin: 9px 0 7px;
+    font-size: 17px;
+    color: #382c3b;
+}
+
+.landing-info-card p {
+    margin: 0;
+    color: #766d78;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+.landing-footer {
+    padding: 35px 7%;
+    text-align: center;
+    background: #6e397f;
+    color: white;
+}
+
+.landing-footer-logo {
+    font-family: "Baloo 2", cursive;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.landing-footer p {
+    max-width: 500px;
+    margin: 5px auto 15px;
+    color: #eadff0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.landing-footer small {
+    color: #d7c4df;
+    font-size: 10px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .landing-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .landing-content {
+        padding: 20px 0 0;
+    }
+
+    .landing-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .landing-buttons {
+        justify-content: center;
+    }
+
+    .landing-illustration {
+        height: 350px;
+    }
+
+    .landing-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .landing-info {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .landing-navbar {
+        height: 68px;
+        padding: 0 5%;
+    }
+
+    .landing-logo {
+        font-size: 28px;
+    }
+
+    .landing-login,
+    .landing-register {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .landing-hero {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .landing-content h1 {
+        font-size: 39px;
+    }
+
+    .landing-content > p {
+        font-size: 13px;
+    }
+
+    .landing-illustration {
+        height: 300px;
+    }
+
+    .landing-circle {
+        width: 245px;
+        height: 245px;
+    }
+
+    .landing-book {
+        transform: scale(0.78) rotate(-5deg);
+    }
+
+    .floating-one {
+        top: 30px;
+        right: 15px;
+    }
+
+    .floating-two {
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .landing-info {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .landing-info-card {
+        padding: 21px;
+    }
+}
+
+/* =========================================
+   AUTH PAGE
+   LOGIN & REGISTER
+   ========================================= */
+
+.auth-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #fbf1fc;
+    font-family: "Poppins", sans-serif;
+    color: #28232a;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* =========================================
+   AUTH INTRO
+   ========================================= */
+
+.auth-intro {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 8%;
+    background: linear-gradient(
+        145deg,
+        #7b3f91,
+        #a65bb5
+    );
+    color: white;
+}
+
+.auth-logo {
+    position: relative;
+    z-index: 5;
+    color: white;
+    text-decoration: none;
+    font-family: "Baloo 2", cursive;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.auth-intro-content {
+    position: relative;
+    z-index: 5;
+    max-width: 520px;
+    margin-top: 115px;
+}
+
+.auth-label {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.16);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.auth-intro-content h1 {
+    margin: 20px 0 15px;
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(42px, 4vw, 60px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.auth-intro-content h1 span {
+    display: block;
+    color: #f3c9df;
+}
+
+.auth-intro-content p {
+    max-width: 470px;
+    color: #f1e5f4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   DECORATION
+   ========================================= */
+
+.auth-decoration {
+    position: absolute;
+    right: -50px;
+    bottom: -40px;
+    width: 430px;
+    height: 330px;
+}
+
+.auth-decoration-circle {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    right: 30px;
+    bottom: -70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+}
+
+.auth-mini-book {
+    position: absolute;
+    z-index: 2;
+    right: 80px;
+    bottom: 45px;
+    width: 210px;
+    height: 145px;
+    transform: rotate(-8deg);
+    filter: drop-shadow(
+        0 15px 20px rgba(40, 20, 50, 0.2)
+    );
+}
+
+.auth-mini-cover {
+    position: absolute;
+    left: 0;
+    width: 140px;
+    height: 145px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px 3px 3px 10px;
+    background: #f1c8df;
+}
+
+.auth-mini-cover strong {
+    color: #7b3f91;
+    font-family: "Baloo 2", cursive;
+    font-size: 25px;
+}
+
+.auth-mini-page {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 85px;
+    height: 135px;
+    padding: 30px 14px;
+    box-sizing: border-box;
+    border-radius: 3px 10px 10px 3px;
+    background: white;
+}
+
+.auth-mini-page div {
+    height: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #dfd2e4;
+}
+
+
+/* =========================================
+   FORM SECTION
+   ========================================= */
+
+.auth-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #fbf1fc;
+}
+
+.auth-form-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 45px;
+    background: white;
+    border: 1px solid #ead7ee;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(84,42,98,0.08);
+    box-sizing: border-box;
+}
+
+.auth-form-header {
+    margin-bottom: 28px;
+}
+
+.auth-form-header h2 {
+    margin: 0 0 7px;
+    font-family: "Baloo 2", cursive;
+    color: #39283f;
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.auth-form-header p {
+    margin: 0;
+    color: #766d78;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FORM INPUT
+   ========================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #413747;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    border: 1px solid #ddcce2;
+    border-radius: 11px;
+    outline: none;
+    background: #fff;
+    color: #332a36;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #aaa1ad;
+}
+
+.form-group input:focus {
+    border-color: #9b59b2;
+    box-shadow: 0 0 0 3px rgba(155,89,178,0.1);
+}
+
+
+/* =========================================
+   AUTH OPTIONS
+   ========================================= */
+
+.auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3px 0 22px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #756d78;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    accent-color: #7b3f91;
+}
+
+.forgot-password {
+    color: #7b3f91;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+.auth-submit-button {
+    width: 100%;
+    height: 47px;
+    border: none;
+    border-radius: 11px;
+    background: #7b3f91;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 7px 15px rgba(123,63,145,0.2);
+    transition: 0.2s ease;
+}
+
+.auth-submit-button:hover {
+    background: #5d2d70;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.auth-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.auth-divider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #eadfeD;
+}
+
+.auth-divider span {
+    position: relative;
+    padding: 0 12px;
+    background: white;
+    color: #aaa1ad;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   REGISTER LINK
+   ========================================= */
+
+.auth-register-link {
+    text-align: center;
+}
+
+.auth-register-link p {
+    margin: 0;
+    color: #766d78;
+    font-size: 11px;
+}
+
+.auth-register-link a {
+    color: #7b3f91;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-register-link a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    display: block;
+    margin-top: 25px;
+    color: #9a8d9f;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.back-home:hover {
+    color: #7b3f91;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-intro {
+        min-height: 330px;
+        padding: 30px 7%;
+    }
+
+    .auth-intro-content {
+        margin-top: 55px;
+        max-width: 600px;
+    }
+
+    .auth-intro-content h1 {
+        font-size: 42px;
+    }
+
+    .auth-intro-content p {
+        max-width: 520px;
+    }
+
+    .auth-decoration {
+        display: none;
+    }
+
+    .auth-form-section {
+        padding: 40px 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-intro {
+        min-height: 290px;
+        padding: 25px 7%;
+    }
+
+    .auth-logo {
+        font-size: 29px;
+    }
+
+    .auth-intro-content {
+        margin-top: 45px;
+    }
+
+    .auth-label {
+        font-size: 10px;
+        padding: 7px 13px;
+    }
+
+    .auth-intro-content h1 {
+        margin-top: 14px;
+        font-size: 34px;
+    }
+
+    .auth-intro-content p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .auth-form-section {
+        padding: 25px 15px;
+    }
+
+    .auth-form-box {
+        padding: 30px 23px;
+        border-radius: 18px;
+    }
+
+    .auth-form-header h2 {
+        font-size: 27px;
+    }
+}
+/* =========================================
+   LOGIN - DESKTOP TOP PURPLE LAYOUT
+   ========================================= */
+
+.auth-container {
+    min-height: 100vh;
+    display: block;
+    background: #fbf1fc;
+}
+
+
+/* =========================================
+   BAGIAN UNGU DI ATAS
+   ========================================= */
+
+.auth-intro {
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    padding: 35px 7%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background: linear-gradient(
+        110deg,
+        #7b3f91,
+        #a65bb5
+    );
+
+    color: white;
+}
+
+
+/* LOGO */
+
+.auth-logo {
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+
+    color: white;
+    text-decoration: none;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+
+/* ISI BAGIAN UNGU */
+
+.auth-intro-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 650px;
+    margin-top: 55px;
+}
+
+.auth-label {
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.16);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.auth-intro-content h1 {
+    margin: 14px 0 10px;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 42px;
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.auth-intro-content h1 span {
+    display: inline;
+    color: #f3c9df;
+}
+
+.auth-intro-content p {
+    max-width: 580px;
+
+    margin: 0;
+
+    color: #f3e7f6;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ILUSTRASI BUKU
+   ========================================= */
+
+.auth-decoration {
+    position: absolute;
+
+    right: 7%;
+    bottom: -45px;
+
+    width: 350px;
+    height: 300px;
+}
+
+.auth-decoration-circle {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: 0;
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.09);
+}
+
+.auth-mini-book {
+    position: absolute;
+
+    right: 55px;
+    bottom: 35px;
+
+    width: 210px;
+    height: 145px;
+
+    transform: rotate(-7deg);
+
+    filter: drop-shadow(
+        0 15px 20px rgba(40,20,50,0.2)
+    );
+}
+
+.auth-mini-cover {
+    position: absolute;
+
+    left: 0;
+
+    width: 140px;
+    height: 145px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px 3px 3px 10px;
+
+    background: #f1c8df;
+}
+
+.auth-mini-cover strong {
+    color: #7b3f91;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 25px;
+}
+
+.auth-mini-page {
+    position: absolute;
+
+    right: 0;
+    top: 5px;
+
+    width: 85px;
+    height: 135px;
+
+    padding: 30px 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 3px 10px 10px 3px;
+
+    background: white;
+}
+
+.auth-mini-page div {
+    height: 4px;
+
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    background: #dfd2e4;
+}
+
+
+/* =========================================
+   FORM LOGIN DI BAWAH
+   ========================================= */
+
+.auth-form-section {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 55px 20px 70px;
+
+    box-sizing: border-box;
+
+    background: #fbf1fc;
+}
+
+.auth-form-box {
+    width: 100%;
+    max-width: 470px;
+
+    padding: 38px 45px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border: 1px solid #ead7ee;
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px rgba(84,42,98,0.08);
+}
+
+
+/* =========================================
+   FORM HEADER
+   ========================================= */
+
+.auth-form-header {
+    margin-bottom: 25px;
+}
+
+.auth-form-header h2 {
+    margin: 0 0 6px;
+
+    color: #39283f;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.auth-form-header p {
+    margin: 0;
+
+    color: #766d78;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .auth-intro {
+        min-height: 310px;
+        padding: 30px 6%;
+    }
+
+    .auth-logo {
+        font-size: 30px;
+    }
+
+    .auth-intro-content {
+        margin-top: 45px;
+    }
+
+    .auth-intro-content h1 {
+        font-size: 38px;
+    }
+
+    .auth-intro-content p {
+        max-width: 500px;
+    }
+
+    .auth-decoration {
+        right: 2%;
+        transform: scale(0.8);
+        transform-origin: bottom right;
+    }
+
+    .auth-form-section {
+        padding: 45px 20px 60px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .auth-intro {
+        min-height: 300px;
+        padding: 25px 6%;
+    }
+
+    .auth-logo {
+        font-size: 28px;
+    }
+
+    .auth-intro-content {
+        margin-top: 42px;
+        max-width: 100%;
+    }
+
+    .auth-label {
+        padding: 6px 13px;
+        font-size: 9px;
+    }
+
+    .auth-intro-content h1 {
+        margin-top: 12px;
+        font-size: 32px;
+    }
+
+    .auth-intro-content p {
+        max-width: 90%;
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .auth-decoration {
+        display: none;
+    }
+
+    .auth-form-section {
+        padding: 30px 15px 50px;
+    }
+
+    .auth-form-box {
+        max-width: 430px;
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .auth-form-header h2 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================
+   REGISTER PAGE
+   ========================================= */
+
+.register-form-box {
+    max-width: 520px;
+}
+
+.register-form-box .form-group {
+    margin-bottom: 14px;
+}
+
+.register-form-box .form-group input,
+.register-form-box .form-group select {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    box-sizing: border-box;
+
+    border: 1px solid #ddcce2;
+    border-radius: 10px;
+
+    outline: none;
+    background: white;
+
+    color: #332a36;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.register-form-box .form-group select {
+    cursor: pointer;
+}
+
+.register-form-box .form-group input:focus,
+.register-form-box .form-group select:focus {
+    border-color: #9b59b2;
+
+    box-shadow:
+        0 0 0 3px rgba(155,89,178,0.1);
+}
+
+
+/* =========================================
+   REGISTER RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .register-form-box {
+        padding: 28px 20px;
+    }
+
+    .register-form-box .form-group {
+        margin-bottom: 13px;
+    }
+
+    .register-form-box .form-group input,
+    .register-form-box .form-group select {
+        height: 43px;
+        font-size: 11px;
+    }
+}
+/* =========================================
+   RESULTS PAGE
+   ========================================= */
+
+.results-page {
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.results-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.results-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #9a59ae;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.results-header h1 {
+    margin: 0;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 38px;
+    line-height: 1;
+
+    color: #39283f;
+}
+
+.results-header p {
+    margin: 10px 0 0;
+
+    color: #766d78;
+
+    font-size: 12px;
+}
+
+.back-search-button {
+    flex-shrink: 0;
+
+    padding: 10px 17px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    border: 1px solid #dfcce5;
+
+    color: #7b3f91;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* FILTER */
+
+.results-filter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.filter-item {
+    padding: 15px 18px;
+
+    background: white;
+
+    border: 1px solid #ead7ee;
+    border-radius: 13px;
+}
+
+.filter-item small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #938996;
+
+    font-size: 9px;
+}
+
+.filter-item strong {
+    display: block;
+
+    color: #49354f;
+
+    font-size: 12px;
+}
+
+
+/* SECTION */
+
+.results-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+}
+
+.results-section-header h2 {
+    margin: 0;
+
+    font-family: "Baloo 2", cursive;
+
+    color: #39283f;
+
+    font-size: 25px;
+}
+
+.results-section-header p {
+    margin: 3px 0 0;
+
+    color: #857987;
+
+    font-size: 10px;
+}
+
+.result-count {
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #ead7f0;
+
+    color: #6f397f;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* GRID */
+
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 42px 10px;
+    align-items: stretch;
+}
+
+
+/* REFERENCE CARD */
+
+.reference-card {
+    position: relative;
+    min-width: 0;
+    min-height: 220px;
+    padding: 55px 8px 10px;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #815098;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(74, 38, 88, 0.12);
+    transition: 0.2s ease;
+}
+
+.reference-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(74, 38, 88, 0.18);
+}
+
+
+/* COVER */
+
+.reference-cover {
+    position: absolute;
+    top: -30px;
+    left: 12px;
+    right: 12px;
+    height: 75px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(60, 30, 70, 0.12);
+}
+
+.reference-cover::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 28px;
+    height: 23px;
+
+    background: white;
+
+    border-radius: 0 14px 0 0;
+}
+
+
+/* COVER COLORS */
+
+.reference-cover.cover-purple {
+    background: #bd78d0;
+}
+
+.reference-cover.cover-pink {
+    background: #d66c98;
+}
+
+.reference-cover.cover-blue {
+    background: #a9addb;
+}
+
+.reference-cover.cover-yellow {
+    background: #f4d76c;
+}
+
+.reference-cover.cover-teal {
+    background: #94ced1;
+}
+
+.reference-cover.cover-coral {
+    background: #ee9f99;
+}
+
+
+/* BOOK DESIGN */
+
+.reference-book-design {
+    position: absolute;
+
+    left: 15px;
+    bottom: 12px;
+
+    color: white;
+}
+
+.reference-book-design strong {
+    display: block;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 13px;
+    line-height: 1;
+}
+
+.reference-book-design span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    opacity: 0.9;
+}
+
+
+/* INFO */
+
+.reference-info {
+    position: relative;
+}
+
+.reference-type {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 10px;
+
+    background: #ead7f0;
+
+    color: #6d397c;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.reference-info h3 {
+    margin: 8px 0 2px;
+
+    color: #3d3042;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.reference-author {
+    margin: 0;
+
+    color: #887d8b;
+
+    font-size: 9px;
+}
+
+.reference-description {
+    min-height: 32px;
+
+    margin: 9px 0 12px;
+
+    color: #746b77;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* BUTTON */
+
+.reference-button {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    background: #7b3f91;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.reference-button:hover {
+    background: #5d2d70;
+}
+
+
+/* =========================================
+   RESULTS RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .results-grid {
+        grid-template-columns:
+            repeat(2, minmax(210px, 1fr));
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .results-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .results-header h1 {
+        font-size: 32px;
+    }
+
+    .results-filter {
+        grid-template-columns: 1fr;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-section-header {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .reference-card {
+        max-width: 100%;
+    }
+
+}
+
+/* =========================================
+   RUANG DISKUSI - CHAT STYLE
+   ========================================= */
+
+.discussion-page {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   JUDUL
+   ========================================= */
+
+.discussion-title {
+    margin-bottom: 8px;
+}
+
+.discussion-title h1 {
+    margin: 0;
+
+    color: #241d28;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 27px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+.discussion-title p {
+    margin: 4px 0 8px;
+
+    color: #4d4650;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CHAT BOX
+   ========================================= */
+
+.discussion-chat {
+    width: 100%;
+    height: calc(100vh - 125px);
+
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    border: 2px solid #815098;
+    border-radius: 15px;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   AREA PESAN
+   ========================================= */
+
+.discussion-messages {
+    flex: 1;
+
+    padding: 18px 18px 12px;
+
+    overflow-y: auto;
+
+    background: #fff;
+}
+
+
+/* =========================================
+   MESSAGE ROW
+   ========================================= */
+
+.message-row {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-bottom: 12px;
+}
+
+.message-avatar {
+    width: 37px;
+    height: 37px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.avatar-ilham {
+    background: #e5d1ef;
+    color: #70407f;
+}
+
+.avatar-cindy {
+    background: #f3c9d8;
+    color: #9c496d;
+}
+
+
+/* =========================================
+   MESSAGE CONTENT
+   ========================================= */
+
+.message-content {
+    max-width: 70%;
+}
+
+.message-name {
+    margin-bottom: 4px;
+
+    color: #201b22;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.message-name span {
+    font-weight: 600;
+}
+
+.message-name time {
+    margin-left: 7px;
+
+    color: #716a72;
+
+    font-size: 8px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   BUBBLE
+   ========================================= */
+
+.message-bubble {
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    border-radius: 0 9px 9px 9px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.other-message {
+    max-width: 520px;
+
+    background: #e7d5ee;
+
+    color: #28212b;
+}
+
+
+/* =========================================
+   PESAN SENDIRI
+   ========================================= */
+
+.my-message-row {
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    margin-top: 7px;
+}
+
+.my-message {
+    max-width: 210px;
+
+    border-radius: 10px 10px 0 10px;
+
+    background: #e58bb8;
+
+    color: #291d25;
+
+    font-size: 11px;
+}
+
+.my-message strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 10px;
+}
+
+.my-message-time {
+    margin-right: 5px;
+
+    color: #756e76;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   INPUT AREA
+   ========================================= */
+
+.discussion-input-area {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 10px;
+
+    border-top: 1px solid #d9c0e1;
+
+    background: #dfc8e7;
+}
+
+
+/* ATTACHMENT */
+
+.attachment-button {
+    width: 31px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5e326c;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transform: rotate(-20deg);
+}
+
+.attachment-button:hover {
+    color: #7b3f91;
+}
+
+
+/* INPUT */
+
+.discussion-input-area input {
+    flex: 1;
+
+    height: 36px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #815098;
+
+    border-radius: 20px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #332a36;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+}
+
+.discussion-input-area input::placeholder {
+    color: #777078;
+}
+
+.discussion-input-area input:focus {
+    border-color: #6e397f;
+}
+
+
+/* SEND */
+
+.send-message-button {
+    width: 37px;
+    height: 37px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #7b3f91;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.send-message-button:hover {
+    background: #5d2d70;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+.discussion-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.discussion-messages::-webkit-scrollbar-track {
+    background: #faf6fb;
+}
+
+.discussion-messages::-webkit-scrollbar-thumb {
+    background: #c9a5d2;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .discussion-chat {
+        height: calc(100vh - 115px);
+    }
+
+    .message-content {
+        max-width: 75%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .discussion-title h1 {
+        font-size: 25px;
+    }
+
+    .discussion-title p {
+        font-size: 11px;
+    }
+
+    .discussion-chat {
+        height: calc(100vh - 145px);
+
+        min-height: 400px;
+
+        border-radius: 12px;
+    }
+
+    .discussion-messages {
+        padding: 14px 10px;
+    }
+
+    .message-avatar {
+        width: 32px;
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+    .message-content {
+        max-width: 78%;
+    }
+
+    .message-name {
+        font-size: 8px;
+    }
+
+    .message-bubble {
+        font-size: 10px;
+    }
+
+    .discussion-input-area {
+        padding: 7px;
+    }
+
+    .discussion-input-area input {
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+    .send-message-button {
+        width: 34px;
+        height: 34px;
+    }
+
+}
+
+/* =========================================
+   MODAL TAMBAH REFERENSI
+   ========================================= */
+
+.reference-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(40, 25, 45, 0.35);
+
+    backdrop-filter: blur(5px);
+}
+
+.reference-modal-overlay.show {
+    display: flex;
+}
+
+
+.reference-modal {
+    width: 100%;
+    max-width: 810px;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    padding: 22px 25px 18px;
+
+    box-sizing: border-box;
+
+    background: #e989dc;
+
+    border: 7px solid #7b3f91;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(55, 25, 65, 0.3);
+}
+
+
+/* HEADER */
+
+.reference-modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 10px;
+
+    border-bottom: 3px solid #7b3f91;
+}
+
+.reference-modal-header h2 {
+    margin: 0;
+
+    color: white;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    text-shadow:
+        1px 2px 0 #633472;
+}
+
+.reference-modal-close {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 31px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* FORM */
+
+.reference-form-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    padding-top: 20px;
+}
+
+.reference-form-left {
+    padding-right: 25px;
+
+    border-right: 3px solid #7b3f91;
+}
+
+.reference-form-right {
+    padding-left: 2px;
+}
+
+
+.reference-form-group {
+    margin-bottom: 13px;
+}
+
+.reference-form-group label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: white;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    text-shadow:
+        1px 1px 0 #633472;
+}
+
+.reference-form-group label span {
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-shadow: none;
+}
+
+
+.reference-form-group input,
+.reference-form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 2px solid #815098;
+
+    border-radius: 17px;
+
+    outline: none;
+
+    background: white;
+
+    color: #332a36;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+}
+
+.reference-form-group input {
+    height: 39px;
+
+    padding: 0 12px;
+}
+
+.reference-form-group textarea {
+    height: 135px;
+
+    padding: 10px 12px;
+
+    resize: none;
+}
+
+.reference-form-group input:focus,
+.reference-form-group textarea:focus {
+    border-color: #5d2d70;
+
+    box-shadow:
+        0 0 0 3px rgba(93,45,112,0.12);
+}
+
+
+.reference-small-fields {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+/* FOOTER */
+
+.reference-modal-footer {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.reference-cancel-button,
+.reference-submit-button {
+    height: 38px;
+
+    padding: 0 22px;
+
+    border-radius: 20px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.reference-cancel-button {
+    border: 2px solid #7b3f91;
+
+    background: white;
+
+    color: #7b3f91;
+}
+
+.reference-submit-button {
+    border: none;
+
+    background: #7b3f91;
+
+    color: white;
+
+    box-shadow:
+        0 5px 10px rgba(80,30,95,0.2);
+}
+
+.reference-submit-button:hover {
+    background: #5d2d70;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .reference-modal {
+        padding: 18px;
+
+        border-width: 5px;
+
+        border-radius: 17px;
+    }
+
+    .reference-modal-header h2 {
+        font-size: 22px;
+    }
+
+    .reference-form-layout {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+    .reference-form-left {
+        padding-right: 0;
+
+        border-right: none;
+    }
+
+    .reference-form-group label {
+        font-size: 15px;
+    }
+
+    .reference-modal-footer {
+        margin-top: 10px;
+
+        justify-content: stretch;
+    }
+
+    .reference-cancel-button,
+    .reference-submit-button {
+        flex: 1;
+
+        padding: 0 10px;
+    }
+}
+
+/* =========================================
+   SIDEBAR - STEP 1
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 250px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 2px solid #815098;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 15px rgba(74, 38, 88, 0.05);
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   TOMBOL TOGGLE
+   ========================================= */
+
+.sidebar-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #815098;
+    font-size: 20px;
+    line-height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+}
+
+.sidebar-toggle:hover {
+    background: #f2e4f6;
+}
+
+/* =========================================
+   KNOWMATE - GLOBAL SIDEBAR
+   SEMUA HALAMAN HARUS SAMA
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+
+    width: 250px;
+    height: auto;
+
+    padding: 20px 15px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 2px solid #815098;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 15px rgba(74, 38, 88, 0.05);
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   TOGGLE
+   ========================================= */
+
+.sidebar-toggle {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #815098;
+
+    font-size: 20px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+}
+
+.sidebar-toggle:hover {
+    background: #f2e4f6;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.sidebar-logo {
+    position: relative;
+
+    width: 100%;
+
+    padding: 10px 10px 18px;
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+
+    color: #b35bc4;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 31px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-align: left;
+}
+
+.sidebar-logo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+
+    height: 2px;
+
+    background: #815098;
+}
+
+
+/* =========================================
+   MENU
+   ========================================= */
+
+.sidebar-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   MENU LINK
+   ========================================= */
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 45px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    gap: 10px;
+
+    border-radius: 11px;
+
+    color: #302a32;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #f2e4f6;
+    color: #6e397f;
+}
+
+.sidebar-link.active {
+    background: #dfc1ec;
+    color: #51315d;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.sidebar-icon {
+    width: 20px;
+    min-width: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.sidebar-text {
+    display: inline-block;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   LOGOUT
+   ========================================= */
+
+.logout-link {
+    position: relative;
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    border-radius: 0;
+}
+
+.logout-link::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10px;
+    right: 10px;
+
+    height: 2px;
+
+    background: #815098;
+}
+
+.logout-link:hover {
+    background: transparent;
+    color: #7b3f91;
+}
+
+
+/* =========================================
+   KONTEN SEMUA HALAMAN
+   ========================================= */
+
+.main-content {
+    margin-left: 290px;
+
+    min-height: 100vh;
+
+    padding: 20px 25px;
+
+    box-sizing: border-box;
+
+    background: #fbf1fc;
+
+    transition: margin-left 0.3s ease;
+}
+
+
+/* =========================================
+   KNOWMATE - FIX SIDEBAR
+   ========================================= */
+
+/* Ukuran dan posisi sidebar */
+.sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+
+    padding: 20px 15px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 2px solid #815098;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 15px rgba(74, 38, 88, 0.05);
+
+    transition: width 0.3s ease;
+}
+
+/* Tombol buka/tutup */
+.sidebar-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #815098;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sidebar-toggle:hover {
+    background: #f2e4f6;
+}
+
+/* Logo KnowMate */
+.sidebar-logo {
+    position: relative;
+
+    width: 100%;
+    padding: 8px 10px 18px;
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+
+    color: #b35bc4;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 31px;
+    font-weight: 800;
+    line-height: 1;
+
+    text-align: left;
+}
+
+.sidebar-logo::after {
+    content: "";
+
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+
+    height: 2px;
+    background: #815098;
+}
+
+/* Susunan menu */
+.sidebar-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    flex: 1;
+}
+
+/* Tombol menu */
+.sidebar-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    min-height: 40px;
+
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    gap: 10px;
+
+    border-radius: 11px;
+
+    color: #302a32;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #f2e4f6;
+    color: #6e397f;
+}
+
+.sidebar-link.active {
+    background: #dfc1ec;
+    color: #51315d;
+    font-weight: 600;
+}
+
+/* FIX: ikon saja yang memiliki lebar 20px */
+.sidebar-link .sidebar-icon {
+    display: inline-flex;
+
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+
+    flex: 0 0 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    line-height: 1;
+}
+
+/* FIX: teks tidak ikut terkena aturan ikon */
+.sidebar-link .sidebar-text {
+    display: inline-block;
+
+    width: auto;
+    min-width: 0;
+
+    flex: 1 1 auto;
+
+    font-size: 13px;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+/* Menu Keluar */
+.sidebar-link.logout-link {
+    position: relative;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    border-radius: 0;
+}
+
+.sidebar-link.logout-link::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+
+    height: 2px;
+    background: #815098;
+}
+
+.sidebar-link.logout-link:hover {
+    background: transparent;
+    color: #7b3f91;
+}
+
+/* Posisi konten halaman */
+.main-content {
+    margin-left: 290px;
+
+    min-height: 100vh;
+    padding: 20px 25px;
+
+    box-sizing: border-box;
+    background: #fbf1fc;
+
+    transition: margin-left 0.3s ease;
+}
+
+
+/* =========================================
+   SIDEBAR BUKA / TUTUP
+   ========================================= */
+
+/* Sidebar saat ditutup */
+.sidebar.sidebar-collapsed {
+    width: 76px;
+    min-width: 76px;
+    max-width: 76px;
+
+    padding: 20px 10px;
+}
+
+/* Tombol toggle saat sidebar ditutup */
+.sidebar.sidebar-collapsed .sidebar-toggle {
+    right: 20px;
+}
+
+/* Sembunyikan tulisan logo */
+.sidebar.sidebar-collapsed .sidebar-logo-text {
+    display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-logo {
+    min-height: 42px;
+    padding: 8px 0 18px;
+}
+
+.sidebar.sidebar-collapsed .sidebar-logo::after {
+    left: 0;
+    right: 0;
+}
+
+/* Sembunyikan teks menu */
+.sidebar.sidebar-collapsed .sidebar-text {
+    display: none;
+}
+
+/* Pusatkan ikon */
+.sidebar.sidebar-collapsed .sidebar-link {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+}
+
+.sidebar.sidebar-collapsed .sidebar-icon {
+    margin: 0;
+}
+
+/* Sesuaikan garis menu Keluar */
+.sidebar.sidebar-collapsed .sidebar-link.logout-link::before {
+    left: 0;
+    right: 0;
+}
+
+/* Konten bergeser ketika sidebar ditutup */
+.main-content.sidebar-content-collapsed {
+    margin-left: 110px;
+}
+
+/* Transisi halus */
+.sidebar,
+.main-content {
+    transition: width 0.3s ease, margin-left 0.3s ease;
+}
+
+
+/* FIX SIDEBAR TOGGLE */
+.sidebar.sidebar-collapsed {
+    width: 76px !important;
+    min-width: 76px !important;
+    max-width: 76px !important;
+
+    padding: 20px 10px !important;
+}
+
+.sidebar.sidebar-collapsed .sidebar-logo-text,
+.sidebar.sidebar-collapsed .sidebar-text {
+    display: none !important;
+}
+
+.sidebar.sidebar-collapsed .sidebar-logo {
+    min-height: 42px;
+    padding: 8px 0 18px !important;
+}
+
+.sidebar.sidebar-collapsed .sidebar-logo::after {
+    left: 0;
+    right: 0;
+}
+
+.sidebar.sidebar-collapsed .sidebar-link {
+    justify-content: center;
+    gap: 0;
+    padding: 0 !important;
+}
+
+.sidebar.sidebar-collapsed .sidebar-link.logout-link::before {
+    left: 0;
+    right: 0;
+}
+
+.main-content.sidebar-content-collapsed {
+    margin-left: 110px !important;
+}
+
+
+/* =========================================
+   RESPONSIVE KNOWMATE - HP & TABLET
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Cegah halaman melebar keluar layar */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header versi HP */
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: sticky;
+        top: 0;
+        z-index: 900;
+
+        width: 100%;
+        height: 65px;
+
+        padding: 0 15px;
+        box-sizing: border-box;
+
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(74, 38, 88, 0.08);
+    }
+
+    .mobile-logo {
+        font-family: "Baloo 2", cursive;
+        font-size: 25px;
+        font-weight: 800;
+        color: #b35bc4;
+    }
+
+    .menu-button,
+    .mobile-profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        border: 1px solid #815098;
+        border-radius: 9px;
+
+        background: white;
+        color: #815098;
+
+        font-size: 22px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Sidebar tidak mengambil ruang konten HP */
+    .sidebar {
+        top: 75px !important;
+        left: 10px !important;
+        bottom: 10px !important;
+
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+
+        transform: translateX(-120%);
+        transition: transform 0.3s ease;
+
+        box-shadow: 0 8px 25px rgba(50, 25, 60, 0.18);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Konten utama memenuhi layar */
+    .main-content,
+    .main-content.sidebar-content-collapsed {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+        padding: 18px 14px 30px !important;
+
+        box-sizing: border-box;
+    }
+
+    /* Banner sambutan */
+    .welcome-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 10px;
+
+        width: 100%;
+        min-height: 110px;
+
+        padding: 18px 15px;
+        margin-bottom: 22px;
+
+        box-sizing: border-box;
+        border-radius: 16px;
+    }
+
+    .welcome-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .welcome-text h1 {
+        font-size: clamp(17px, 4.5vw, 23px);
+        line-height: 1.3;
+        overflow-wrap: break-word;
+    }
+
+    .welcome-text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .welcome-illustration {
+        flex: 0 0 55px;
+        width: 55px;
+        max-width: 55px;
+    }
+
+    .welcome-illustration .laptop {
+        width: 52px;
+        transform: scale(0.8);
+        transform-origin: center;
+    }
+
+    /* Form pencarian ditumpuk rapi */
+    .search-area {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 12px;
+        width: 100%;
+    }
+
+    .search-field {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .search-field select {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+
+        box-sizing: border-box;
+    }
+
+    .search-button {
+        width: 100%;
+        min-height: 43px;
+        margin: 0;
+    }
+
+    /* Semester bisa bergeser ke baris berikutnya */
+    .semester-section {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .semester-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .semester-button {
+        flex: 0 0 auto;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+
+    /* Rekomendasi buku menjadi dua kolom */
+    .recommendation-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+        line-height: 1.35;
+    }
+
+    .book-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 14px 10px;
+
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .book-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .book-cover {
+        width: 100%;
+        height: 115px;
+
+        box-sizing: border-box;
+    }
+
+    .book-information {
+        min-width: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .book-information h3 {
+        font-size: 12px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .book-information p {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .book-information span {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Tombol tambah referensi tetap di dalam layar */
+    .add-reference-button {
+        position: fixed;
+        right: 14px;
+        bottom: 18px;
+
+        width: 76px;
+        height: 76px;
+
+        padding: 7px;
+        box-sizing: border-box;
+
+        font-size: 12px;
+        line-height: 1.2;
+
+        z-index: 800;
+    }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    .main-content {
+        margin-left: 265px;
+        padding: 18px;
+    }
+
+    .book-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   BOOKMARK - BUKU TERSIMPAN
+   ========================================= */
+
+.save-book-button {
+    position: absolute;
+    right: 9px;
+    bottom: 9px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #ffffff;
+    color: #815098;
+
+    border: 1px solid #dfc1ec;
+    border-radius: 50%;
+
+    font-size: 17px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 5;
+
+    box-shadow: 0 2px 6px rgba(74, 38, 88, 0.12);
+    transition: 0.2s ease;
+}
+
+.save-book-button:hover {
+    background: #f2e4f6;
+    transform: scale(1.08);
+}
+
+.save-book-button.is-saved {
+    background: #815098;
+    color: #ffffff;
+    border-color: #815098;
+}
+
+/* Kartu buku menjadi acuan posisi bookmark */
+.book-card,
+.reference-card {
+    position: relative;
+}
+
+/* =========================================
+   HALAMAN BUKU TERSIMPAN
+   ========================================= */
+
+.saved-books-header {
+    padding: 25px;
+    margin-bottom: 30px;
+
+    background: linear-gradient(100deg, #dca6e7, #e8b9df);
+    border-radius: 16px;
+}
+
+.saved-books-label {
+    color: #70427d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.saved-books-header h1 {
+    margin: 8px 0;
+    color: #38243f;
+    font-family: "Baloo 2", cursive;
+    font-size: 28px;
+}
+
+.saved-books-header p {
+    color: #503b55;
+    font-size: 14px;
+}
+
+.saved-books-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 65px;
+}
+
+.saved-books-heading h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 22px;
+    color: #493052;
+}
+
+.saved-books-heading span {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #ead6f0;
+    color: #70427d;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.saved-books-empty {
+    display: none;
+    padding: 35px 20px;
+    text-align: center;
+    background: white;
+    border: 1px dashed #c9a4d6;
+    border-radius: 16px;
+}
+
+.saved-empty-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.saved-books-empty h3 {
+    color: #51315d;
+    font-family: "Baloo 2", cursive;
+    font-size: 21px;
+}
+
+.saved-books-empty p {
+    max-width: 400px;
+    margin: 8px auto 18px;
+    color: #786b7c;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.saved-back-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #815098;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.saved-back-button:hover {
+    background: #693d7f;
+}
+
+/* Kartu buku tersimpan */
+.saved-books-page .book-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 70px;
+}
+
+.saved-books-page .book-card {
+    cursor: default;
+}
+
+.saved-books-page .book-information h3 {
+    overflow-wrap: anywhere;
+}
+
+/* HP */
+@media (max-width: 700px) {
+    .saved-books-header {
+        padding: 20px 16px;
+    }
+
+    .saved-books-header h1 {
+        font-size: 23px;
+    }
+
+    .saved-books-heading {
+        margin-bottom: 60px;
+    }
+
+    .saved-books-heading h2 {
+        font-size: 18px;
+    }
+
+    .saved-books-page .book-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 65px 10px;
+    }
+
+    .saved-books-empty {
+        padding: 28px 15px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .saved-books-page .book-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   TOMBOL TAMBAH REFERENSI
+   ========================================= */
+
+.add-reference-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #c982df,
+        #815098
+    );
+
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    cursor: pointer;
+    z-index: 800;
+
+    box-shadow: 0 5px 15px rgba(74, 38, 88, 0.2);
+
+    transition: transform 0.2s ease;
+}
+
+.add-reference-button span {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.add-reference-button:hover {
+    transform: scale(1.05);
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    .add-reference-button {
+        right: 14px;
+        bottom: 18px;
+
+        width: 78px;
+        height: 78px;
+        padding: 7px;
+
+        gap: 2px;
+        font-size: 9px;
+        line-height: 1.2;
+    }
+
+    .add-reference-button span {
+        font-size: 21px;
+    }
+}
+
+/* =========================================
+   KNOWMATE - HALAMAN PROFIL
+   ========================================= */
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+/* BANNER PROFIL */
+
+.profile-hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    min-height: 200px;
+    padding: 24px 30px;
+
+    box-sizing: border-box;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        110deg,
+        #ef91e8 0%,
+        #e5b1e8 55%,
+        #d9c1e5 100%
+    );
+}
+
+.profile-hero-avatar {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+
+    overflow: hidden;
+    border: 3px solid #987b83;
+    border-radius: 50%;
+    background: #f8d6d7;
+}
+
+.profile-hero-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-hero-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-hero-info h1 {
+    margin: 0 0 4px;
+
+    color: #17121a;
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(25px, 3vw, 42px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    overflow-wrap: anywhere;
+}
+
+.profile-hero-info p {
+    margin: 0;
+    color: #28202b;
+    font-size: clamp(14px, 1.7vw, 23px);
+    line-height: 1.5;
+}
+
+.profile-hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.profile-edit-button,
+.profile-password-button {
+    min-width: 170px;
+    padding: 7px 15px;
+
+    border: 3px solid #815098;
+    border-radius: 24px;
+
+    background: #ffffff;
+    color: #815098;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-edit-button:hover,
+.profile-password-button:hover {
+    background: #815098;
+    color: #ffffff;
+}
+
+.profile-edit-button span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* STATISTIK */
+
+.profile-statistics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.profile-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+    min-height: 115px;
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 5px solid #815098;
+    border-radius: 25px;
+}
+
+
+.profile-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 78px;
+    height: 78px;
+    flex: 0 0 78px;
+
+    border-radius: 50%;
+    background: #d7c0e8;
+
+    font-size: 38px;
+}
+
+/* Ikon buku hitam bertumpuk */
+.profile-stat-icon.book-stack-icon {
+    position: relative;
+    font-size: 0;
+}
+
+.profile-stat-icon.book-stack-icon::before {
+    content: "";
+
+    position: absolute;
+    width: 37px;
+    height: 13px;
+
+    left: 20px;
+    top: 24px;
+
+    background: #17121a;
+    border: 2px solid #17121a;
+    border-radius: 2px;
+
+    transform: rotate(-12deg);
+
+    box-shadow:
+        0 15px 0 -1px #ffffff,
+        0 15px 0 1px #17121a,
+        0 30px 0 -1px #ffffff,
+        0 30px 0 1px #17121a;
+}
+
+.profile-stat-icon.book-stack-icon::after {
+    content: "";
+
+    position: absolute;
+    width: 10px;
+    height: 39px;
+
+    left: 18px;
+    top: 22px;
+
+    background: #17121a;
+    border-radius: 2px;
+
+    transform: rotate(-12deg);
+}
+
+.profile-stat-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.profile-stat-info strong {
+    color: #17121a;
+    font-family: "Baloo 2", cursive;
+    font-size: 37px;
+    line-height: 1;
+}
+
+.profile-stat-info span {
+    margin-top: 3px;
+
+    color: #17121a;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* RIWAYAT DAN KOLEKSI */
+
+.profile-history {
+    min-width: 0;
+}
+
+.profile-history > h2 {
+    margin: 0 0 2px;
+
+    color: #17121a;
+    font-family: "Baloo 2", cursive;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.profile-history-heading {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    padding: 0 18px 7px;
+
+    border-bottom: 4px solid #815098;
+}
+
+.profile-history-heading h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* DAFTAR BUKU YANG DIBAGIKAN */
+
+.profile-shared-books {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 60px 14px;
+
+    padding: 12px 8px 15px;
+}
+
+.profile-shared-card {
+    position: relative;
+    min-width: 0;
+    min-height: 180px;
+
+    padding: 100px 10px 10px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 3px solid #815098;
+    border-radius: 13px;
+
+    box-shadow: 0 6px 12px rgba(74, 38, 88, 0.12);
+}
+
+.profile-shared-cover {
+    position: absolute;
+    top: -25px;
+    left: 14%;
+    right: 14%;
+
+    height: 105px;
+    border-radius: 16px 0 0 16px;
+
+    background: #bd78cb;
+}
+
+.profile-shared-cover::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+
+    width: 65%;
+    height: 4px;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: 0 9px 0 #ffffff;
+}
+
+.profile-shared-info h4 {
+    margin: 0 0 3px;
+    color: #211a24;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.profile-shared-info p {
+    margin: 0;
+    color: #756b79;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+.profile-shared-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.profile-shared-actions button {
+    flex: 1;
+    min-width: 0;
+
+    padding: 5px 3px;
+    border: none;
+    border-radius: 15px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.profile-book-edit {
+    background: #d7b9e3;
+    color: #493052;
+}
+
+.profile-book-delete {
+    background: #eea0bf;
+    color: #493052;
+}
+
+/* KONDISI KOSONG */
+
+.profile-empty-state {
+    display: none;
+    margin-top: 15px;
+    padding: 30px 20px;
+
+    background: #ffffff;
+    border: 2px dashed #c9a4d6;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.profile-empty-icon {
+    font-size: 38px;
+}
+
+.profile-empty-state h3 {
+    margin: 8px 0;
+    color: #51315d;
+    font-family: "Baloo 2", cursive;
+}
+
+.profile-empty-state p {
+    color: #786b7c;
+    font-size: 13px;
+}
+
+.profile-add-reference {
+    display: inline-block;
+    padding: 10px 16px;
+
+    border-radius: 20px;
+    background: #815098;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* TABLET */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    .profile-hero {
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .profile-hero-avatar {
+        width: 110px;
+        height: 110px;
+        flex-basis: 110px;
+    }
+
+    .profile-edit-button,
+    .profile-password-button {
+        min-width: 135px;
+        font-size: 12px;
+    }
+
+    .profile-stat-card {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .profile-stat-icon {
+        width: 55px;
+        height: 55px;
+        flex-basis: 55px;
+        font-size: 28px;
+    }
+
+    .profile-stat-info strong {
+        font-size: 30px;
+    }
+
+    .profile-shared-books {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* HP */
+
+@media (max-width: 700px) {
+    .profile-main {
+        gap: 16px;
+    }
+
+    .profile-hero {
+        display: grid;
+        grid-template-columns: 75px minmax(0, 1fr);
+        gap: 12px;
+
+        min-height: auto;
+        padding: 18px 14px;
+    }
+
+    .profile-hero-avatar {
+        width: 75px;
+        height: 75px;
+        flex-basis: 75px;
+        border-width: 2px;
+    }
+
+    .profile-hero-info h1 {
+        font-size: 22px;
+    }
+
+    .profile-hero-info p {
+        font-size: 12px;
+    }
+
+    .profile-hero-actions {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .profile-edit-button,
+    .profile-password-button {
+        width: 100%;
+        min-width: 0;
+        padding: 8px 5px;
+        font-size: 11px;
+        border-width: 2px;
+    }
+
+    .profile-statistics {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .profile-stat-card {
+        min-height: 85px;
+        border-width: 3px;
+        border-radius: 18px;
+        padding: 10px 14px;
+    }
+
+    .profile-stat-icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+        font-size: 28px;
+    }
+
+    .profile-stat-info strong {
+        font-size: 29px;
+    }
+
+    .profile-stat-info span {
+        font-size: 12px;
+    }
+
+    .profile-history > h2 {
+        font-size: 25px;
+    }
+
+    .profile-history-heading {
+        margin-left: 0;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .profile-history-heading h3 {
+        font-size: 13px;
+    }
+
+    .profile-shared-books {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 55px 10px;
+        padding: 12px 4px;
+    }
+
+    .profile-shared-card {
+        min-height: 175px;
+        padding: 95px 8px 9px;
+    }
+
+    .profile-shared-cover {
+        height: 100px;
+    }
+}
+
+/* ===== MODAL EDIT PROFIL ===== */
+.profile-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    padding: 24px;
+    background: rgba(35, 20, 45, 0.55);
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-modal-overlay.active {
+    display: flex;
+}
+
+.profile-edit-modal {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 36px;
+    border: 2px solid #e5a0e8;
+    border-radius: 24px;
+    background: #fffaff;
+    box-shadow: 0 16px 50px rgba(45, 20, 60, 0.2);
+}
+
+.profile-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f7e7f8;
+    color: #703b82;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.profile-modal-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.profile-modal-left,
+.profile-modal-right {
+    min-width: 0;
+}
+
+.avatar-picker {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.avatar-picker > img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 4px solid #dca1e5;
+    border-radius: 50%;
+}
+
+.avatar-picker h3 {
+    margin: 12px 0;
+    color: #54315f;
+    font-size: 18px;
+}
+
+.avatar-options {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.avatar-option {
+    width: 58px;
+    height: 58px;
+    padding: 3px;
+    overflow: hidden;
+    border: 2px solid #e5d8e9;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.avatar-option img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatar-option:hover,
+.avatar-option.selected {
+    border-color: #b84bd0;
+    box-shadow: 0 0 0 3px #f2d7f8;
+}
+
+.profile-modal-field {
+    margin-bottom: 20px;
+}
+
+.profile-modal-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #49334f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-modal-field input,
+.profile-modal-field select {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #dfcde5;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    color: #35283b;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.profile-modal-field input:focus,
+.profile-modal-field select:focus {
+    border-color: #b84bd0;
+    box-shadow: 0 0 0 3px rgba(184, 75, 208, 0.12);
+}
+
+.profile-modal-feedback {
+    min-height: 20px;
+    margin-top: 8px;
+    color: #a02d45;
+    font-size: 13px;
+}
+
+.profile-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #f0e2f2;
+}
+
+.profile-modal-actions button {
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.profile-modal-cancel {
+    border: 1px solid #d9c5df;
+    background: white;
+    color: #684b70;
+}
+
+.profile-modal-cancel:hover {
+    background: #f8effa;
+}
+
+.profile-modal-save {
+    border: 1px solid #b84bd0;
+    background: #b84bd0;
+    color: white;
+}
+
+.profile-modal-save:hover {
+    background: #9838b0;
+}
+
+/* RESPONSIVE MODAL */
+@media (max-width: 650px) {
+    .profile-modal-overlay {
+        padding: 12px;
+    }
+
+    .profile-edit-modal {
+        max-height: 92vh;
+        padding: 28px 20px 20px;
+        border-radius: 18px;
+    }
+
+    .profile-modal-columns {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .avatar-picker {
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    .profile-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .profile-modal-actions button {
+        width: 100%;
+    }
+}
+
+/* ===== MODAL UBAH PASSWORD ===== */
+.password-modal {
+    max-width: 480px;
+}
+
+.password-modal-heading {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.password-modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 14px;
+    border-radius: 20px;
+    background: #f5e2fa;
+    font-size: 28px;
+}
+
+.password-modal-heading h2 {
+    margin: 0 0 8px;
+    color: #54315f;
+    font-size: 24px;
+}
+
+.password-modal-heading p {
+    margin: 0;
+    color: #88768e;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.password-modal .profile-modal-field {
+    margin-bottom: 18px;
+}
+
+.password-modal .profile-modal-actions {
+    margin-top: 8px;
+}
+
+/* RESPONSIVE HASIL PENCARIAN */
+@media (max-width: 1200px) {
+    .results-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+@media (max-width: 760px) {
+    .results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+/* =========================================
+   DASHBOARD - KARTU BUKU LEBIH KECIL
+   ========================================= */
+
+.recommendation-section .book-container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 42px 10px;
+    align-items: stretch;
+}
+
+.recommendation-section .book-card {
+    width: 100%;
+    min-width: 0;
+    height: 155px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.recommendation-section .book-cover {
+    top: -30px;
+    left: 10px;
+    right: 10px;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.recommendation-section .book-information {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+}
+
+.recommendation-section .book-information h3 {
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.recommendation-section .book-information p,
+.recommendation-section .book-information span {
+    font-size: 10px;
+}
+
+/* Layar laptop yang lebih sempit */
+@media (max-width: 1200px) {
+    .recommendation-section .book-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+/* Tablet dan HP */
+@media (max-width: 650px) {
+    .recommendation-section .book-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+/* =========================================
+   DASHBOARD - KARTU BUKU LEBIH KECIL
+   ========================================= */
+
+.recommendation-section .book-container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 42px 10px;
+    align-items: stretch;
+}
+
+.recommendation-section .book-card {
+    width: 100%;
+    min-width: 0;
+    height: 155px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.recommendation-section .book-cover {
+    top: -30px;
+    left: 10px;
+    right: 10px;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.recommendation-section .book-information {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+}
+
+.recommendation-section .book-information h3 {
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.recommendation-section .book-information p,
+.recommendation-section .book-information span {
+    font-size: 10px;
+}
+
+/* Layar laptop yang lebih sempit */
+@media (max-width: 1200px) {
+    .recommendation-section .book-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+/* Tablet dan HP */
+@media (max-width: 650px) {
+    .recommendation-section .book-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 12px;
+    }
+}
+
+/* =========================================
+   HALAMAN ARTIKEL JURNAL
+   ========================================= */
+
+.journals-main {
+    padding: 32px;
+    min-width: 0;
+}
+
+.journals-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.journals-eyebrow {
+    margin: 0 0 8px;
+    color: #a04db6;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.journals-heading h1 {
+    margin: 0;
+    color: #493054;
+    font-size: clamp(26px, 3vw, 34px);
+}
+
+.journals-subtitle {
+    margin: 8px 0 0;
+    color: #817388;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.journals-add-button,
+#journalSearchButton,
+.journals-empty button {
+    border: none;
+    border-radius: 10px;
+    background: #a64bc0;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.journals-add-button {
+    flex-shrink: 0;
+    padding: 13px 18px;
+}
+
+.journals-add-button:hover,
+#journalSearchButton:hover,
+.journals-empty button:hover {
+    background: #8739a0;
+}
+
+.journals-add-button span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.journals-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 8px 10px 8px 16px;
+    border: 1px solid #e7d8eb;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(67, 36, 78, 0.04);
+}
+
+.journals-search-icon {
+    color: #a04db6;
+    font-size: 25px;
+}
+
+.journals-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #493054;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+#journalSearchButton {
+    padding: 11px 20px;
+}
+
+.journals-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.journals-results-heading h2 {
+    margin: 0;
+    color: #493054;
+    font-size: 20px;
+}
+
+.journals-results-heading p {
+    margin: 6px 0 0;
+    color: #887b8f;
+    font-size: 12px;
+}
+
+#journalCount {
+    flex-shrink: 0;
+    color: #8a4a9b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.journals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.journal-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #eadfed;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 5px 16px rgba(67, 36, 78, 0.045);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(67, 36, 78, 0.09);
+}
+
+.journal-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.journal-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #f5e7fa;
+    color: #8c42a4;
+    font-size: 22px;
+}
+
+.journal-card-year {
+    padding: 6px 9px;
+    border-radius: 8px;
+    background: #f8effa;
+    color: #87429a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.journal-card h3 {
+    margin: 0 0 10px;
+    color: #493054;
+    font-size: 15px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.journal-card-authors {
+    margin: 0 0 8px;
+    color: #6f6076;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.journal-card-name {
+    margin: 0 0 14px;
+    color: #9b4bb0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.journal-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid #f0e8f2;
+}
+
+.journal-card-meta span {
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #faf6fb;
+    color: #77677e;
+    font-size: 10px;
+}
+
+.journal-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.journal-card-actions a,
+.journal-card-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.journal-doi-link {
+    flex: 1;
+    border: 1px solid #a64bc0;
+    background: #a64bc0;
+    color: white;
+}
+
+.journal-doi-link:hover {
+    background: #8739a0;
+}
+
+.journal-save-bookmark {
+    width: 38px;
+    border: 1px solid #e1cde8;
+    background: white;
+    color: #87429a;
+}
+
+.journal-save-bookmark.saved {
+    border-color: #a64bc0;
+    background: #f5e7fa;
+}
+
+.journals-empty {
+    display: none;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.journals-empty.visible {
+    display: block;
+}
+
+.journals-empty-icon {
+    margin-bottom: 12px;
+    font-size: 40px;
+}
+
+.journals-empty h3 {
+    margin: 0 0 8px;
+    color: #493054;
+}
+
+.journals-empty p {
+    margin: 0 0 20px;
+    color: #887b8f;
+    font-size: 13px;
+}
+
+.journals-empty button {
+    padding: 12px 18px;
+}
+
+/* MODAL TAMBAH ARTIKEL JURNAL */
+.journal-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(35, 20, 45, 0.55);
+}
+
+.journal-modal-overlay.active {
+    display: flex;
+}
+
+.journal-modal {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 30px;
+    border: 1px solid #e5c7ed;
+    border-radius: 20px;
+    background: #fffaff;
+    box-shadow: 0 16px 50px rgba(45, 20, 60, 0.2);
+}
+
+.journal-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #f5e7fa;
+    color: #703b82;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.journal-modal-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.journal-modal-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    background: #f5e7fa;
+    font-size: 26px;
+}
+
+.journal-modal-heading h2 {
+    margin: 0 0 7px;
+    color: #493054;
+    font-size: 22px;
+}
+
+.journal-modal-heading p {
+    margin: 0;
+    color: #887b8f;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.journal-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+}
+
+.journal-form-field {
+    min-width: 0;
+    margin-bottom: 17px;
+}
+
+.journal-form-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #493054;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.journal-form-field input {
+    width: 100%;
+    min-height: 43px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #e1d0e6;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #493054;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.journal-form-field input:focus {
+    border-color: #a64bc0;
+    box-shadow: 0 0 0 3px rgba(166, 75, 192, 0.1);
+}
+
+.journal-form-field small {
+    display: block;
+    margin-top: 6px;
+    color: #887b8f;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.journal-form-feedback {
+    min-height: 18px;
+    margin-bottom: 10px;
+    color: #a02d45;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.journal-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #f0e2f2;
+}
+
+.journal-modal-actions button {
+    min-height: 40px;
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.journal-cancel-button {
+    border: 1px solid #dfcde5;
+    background: white;
+    color: #684b70;
+}
+
+.journal-save-button {
+    border: 1px solid #a64bc0;
+    background: #a64bc0;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .journals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .journals-main {
+        padding: 22px 16px;
+    }
+
+    .journals-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .journals-add-button {
+        width: 100%;
+    }
+
+    .journals-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .journal-modal {
+        padding: 25px 18px 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .journal-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journals-search {
+        gap: 8px;
+        padding-left: 10px;
+    }
+
+    #journalSearchButton {
+        padding: 10px 12px;
+    }
+}
+
+
+/* TOMBOL REFERENSI - VERSI RINGKAS */
+.recommendation-section .book-card {
+    height: 170px;
+}
+
+.recommendation-section .book-information .book-detail-link {
+    display: inline-block;
+    width: auto;
+    max-width: 95px;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    margin-top: 5px;
+    border-radius: 7px;
+    background: #80509a;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 9px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.recommendation-section .book-information .book-detail-link:hover {
+    background: #653c7d;
+}

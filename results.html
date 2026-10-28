@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasil Pencarian - KnowMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- MOBILE HEADER -->
+
+    <header class="mobile-header">
+
+        <button class="menu-button">
+            ☰
+        </button>
+
+        <div class="mobile-logo">
+            KnowMate
+        </div>
+
+        <a href="profile.html" class="mobile-profile">
+            👤
+        </a>
+
+    </header>
+
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="mainSidebar">
+
+    <button
+        type="button"
+        class="sidebar-toggle"
+        id="sidebarToggle"
+        title="Buka/Tutup Sidebar"
+    >
+        ☰
+    </button>
+
+    <div class="sidebar-logo">
+        <span class="sidebar-logo-text">KnowMate</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="profile.html" class="sidebar-link">
+            <span class="sidebar-icon">👤</span>
+            <span class="sidebar-text">Profil</span>
+        </a>
+
+        <a href="dashboard.html" class="sidebar-link">
+            <span class="sidebar-icon">⌂</span>
+            <span class="sidebar-text">Beranda</span>
+        </a>
+
+        <a href="saved-books.html" class="sidebar-link">
+            <span class="sidebar-icon">🔖</span>
+            <span class="sidebar-text">Buku Tersimpan</span>
+        </a>
+
+        <a href="discussion.html" class="sidebar-link">
+            <span class="sidebar-icon">👥</span>
+            <span class="sidebar-text">Ruang Diskusi</span>
+        </a>
+
+        <a href="index.html" class="sidebar-link logout-link">
+            <span class="sidebar-icon">↪</span>
+            <span class="sidebar-text">Keluar</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content results-page">
+
+        <!-- HEADER HASIL -->
+
+        <section class="results-header">
+
+            <div>
+
+                <span class="results-label">
+                    HASIL PENCARIAN
+                </span>
+
+                <h1>
+                    Referensi untukmu
+                </h1>
+
+                <p id="searchDescription">
+                    Menampilkan buku dan referensi yang sesuai dengan pencarianmu.
+                </p>
+
+            </div>
+
+
+            <a href="dashboard.html" class="back-search-button">
+                ← Cari lagi
+            </a>
+
+        </section>
+
+
+
+        <!-- FILTER INFO -->
+
+        <section class="results-filter">
+
+            <div class="filter-item">
+
+                <small>
+                    Program Studi
+                </small>
+
+                <strong id="resultStudy">
+                    Psikologi
+                </strong>
+
+            </div>
+
+
+            <div class="filter-item">
+
+                <small>
+                    Semester
+                </small>
+
+                <strong id="resultSemester">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="filter-item">
+
+                <small>
+                    Mata Kuliah
+                </small>
+
+                <strong id="resultCourse">
+                    -
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HASIL REFERENSI -->
+
+        <section class="results-section">
+
+            <div class="results-section-header">
+
+                <div>
+
+                    <h2>
+                        Buku & Referensi
+                    </h2>
+
+                    <p>
+                        Sumber belajar yang dapat kamu gunakan.
+                    </p>
+
+                </div>
+
+
+                <span class="result-count">
+                    6 Referensi
+                </span>
+
+            </div>
+
+
+
+            <!-- GRID -->
+
+            <div class="results-grid">
+
+
+                <!-- CARD 1 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-purple">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Dasar
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Pengantar Psikologi
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Dasar Psikologi
+                        </p>
+
+                        <p class="reference-description">
+                            Buku pengantar untuk memahami konsep dasar dalam ilmu psikologi.
+                        </p>
+
+                        <a href="detail.html?id=1" class="reference-button">
+    Lihat Referensi
+</a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 2 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-pink">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Belajar
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Psikologi Belajar
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Belajar
+                        </p>
+
+                        <p class="reference-description">
+                            Referensi mengenai proses belajar dan faktor yang memengaruhinya.
+                        </p>
+
+                        <a href="detail.html?id=2" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 3 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-blue">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Sosial
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Psikologi Sosial
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Sosial
+                        </p>
+
+                        <p class="reference-description">
+                            Membahas perilaku individu dalam hubungan dengan lingkungan sosial.
+                        </p>
+
+                        <a href="detail.html?id=3" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 4 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-yellow">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Kognitif
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Psikologi Kognitif
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Kognitif
+                        </p>
+
+                        <p class="reference-description">
+                            Sumber belajar tentang perhatian, memori, berpikir, dan proses kognitif.
+                        </p>
+
+                        <a href="detail.html?id=4" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 5 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-teal">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Klinis
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Psikologi Klinis
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Klinis
+                        </p>
+
+                        <p class="reference-description">
+                            Referensi untuk memahami konsep dasar psikologi klinis.
+                        </p>
+
+                        <a href="detail.html?id=5" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 6 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-coral">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Islam
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            REFERENSI
+                        </span>
+
+                        <h3>
+                            Psikologi Islam
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Islam
+                        </p>
+
+                        <p class="reference-description">
+                            Sumber pembelajaran mengenai psikologi dalam perspektif Islam.
+                        </p>
+
+                        <a href="detail.html?id=6" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- CARD 7 -->
+
+                <article class="reference-card">
+
+                    <div class="reference-cover cover-teal">
+
+                        <div class="reference-book-design">
+
+                            <strong>
+                                PSIKOLOGI
+                            </strong>
+
+                            <span>
+                                Klinis
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reference-info">
+
+                        <span class="reference-type">
+                            BUKU
+                        </span>
+
+                        <h3>
+                            Psikologi Klinis
+                        </h3>
+
+                        <p class="reference-author">
+                            Referensi Psikologi Klinis
+                        </p>
+
+                        <p class="reference-description">
+                            Referensi untuk memahami konsep dasar psikologi klinis.
+                        </p>
+
+                        <a href="detail.html?id=7" class="reference-button">
+                            Lihat Referensi
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TAMBAH REFERENSI -->
+
+        <a
+            href="add-reference.html"
+            class="add-reference-button"
+        >
+            <span>+</span>
+            Tambah Referensi
+        </a>
+
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

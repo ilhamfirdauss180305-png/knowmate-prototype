@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel Jurnal - KnowMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page journals-page">
+
+    <header class="mobile-header">
+        <button type="button" class="menu-button" id="menuButton" aria-label="Buka menu">☰</button>
+        <div class="mobile-logo">KnowMate</div>
+        <a href="profile.html" class="mobile-profile">👤</a>
+    </header>
+
+    <aside class="sidebar" id="mainSidebar">
+        <button type="button" class="sidebar-toggle" id="sidebarToggle" title="Buka/Tutup Sidebar">☰</button>
+
+        <div class="sidebar-logo">
+            <span class="sidebar-logo-text">KnowMate</span>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="profile.html" class="sidebar-link">
+                <span class="sidebar-icon">👤</span>
+                <span class="sidebar-text">Profil</span>
+            </a>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <span class="sidebar-icon">📚</span>
+                <span class="sidebar-text">Buku</span>
+            </a>
+
+            <a href="saved-books.html" class="sidebar-link">
+                <span class="sidebar-icon">🔖</span>
+                <span class="sidebar-text">Buku Tersimpan</span>
+            </a>
+
+            <a href="journals.html" class="sidebar-link active">
+                <span class="sidebar-icon">📄</span>
+                <span class="sidebar-text">Artikel Jurnal</span>
+            </a>
+
+            <a href="discussion.html" class="sidebar-link">
+                <span class="sidebar-icon">👥</span>
+                <span class="sidebar-text">Ruang Diskusi</span>
+            </a>
+
+            <a href="index.html" class="sidebar-link logout-link">
+                <span class="sidebar-icon">↪</span>
+                <span class="sidebar-text">Keluar</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content journals-main">
+
+        <section class="journals-heading">
+            <div>
+                <p class="journals-eyebrow">PUSAT REFERENSI ILMIAH</p>
+                <h1>Artikel Jurnal</h1>
+                <p class="journals-subtitle">
+                    Temukan dan bagikan artikel ilmiah untuk mendukung tugas dan penelitianmu.
+                </p>
+            </div>
+
+            <button type="button" class="journals-add-button" id="openAddJournal">
+                <span>＋</span> Tambah Artikel
+            </button>
+        </section>
+
+        <section class="journals-search">
+            <span class="journals-search-icon">⌕</span>
+            <input
+                type="search"
+                id="journalSearchInput"
+                placeholder="Cari judul artikel, penulis, atau nama jurnal..."
+                autocomplete="off"
+                aria-label="Cari artikel jurnal">
+            <button type="button" id="journalSearchButton">Cari</button>
+        </section>
+
+        <section class="journals-results">
+            <div class="journals-results-heading">
+                <div>
+                    <h2>Koleksi Artikel</h2>
+                    <p>Referensi jurnal yang tersedia di KnowMate.</p>
+                </div>
+                <span id="journalCount">0 artikel</span>
+            </div>
+
+            <div class="journals-grid" id="journalsGrid"></div>
+
+            <div class="journals-empty" id="journalsEmpty">
+                <div class="journals-empty-icon">📚</div>
+                <h3>Belum Ada Artikel Jurnal</h3>
+                <p>Tambahkan referensi jurnal untuk memulai koleksimu.</p>
+                <button type="button" id="emptyAddJournal">Tambah Artikel</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL TAMBAH ARTIKEL -->
+    <div class="journal-modal-overlay" id="journalModal">
+        <section class="journal-modal" role="dialog" aria-modal="true" aria-labelledby="journalModalTitle">
+
+            <button type="button" class="journal-modal-close" id="closeJournalModal" aria-label="Tutup">×</button>
+
+            <div class="journal-modal-heading">
+                <span class="journal-modal-icon">📄</span>
+                <h2 id="journalModalTitle">Tambah Artikel Jurnal</h2>
+                <p>Lengkapi informasi artikel dengan sumber yang jelas.</p>
+            </div>
+
+            <form id="journalForm">
+
+                <div class="journal-form-field journal-form-full">
+                    <label for="journalTitle">Judul Artikel *</label>
+                    <input type="text" id="journalTitle" required maxlength="250" placeholder="Masukkan judul artikel">
+                </div>
+
+                <div class="journal-form-field journal-form-full">
+                    <label for="journalAuthors">Nama Penulis *</label>
+                    <input type="text" id="journalAuthors" required maxlength="500" placeholder="Pisahkan beberapa penulis dengan koma">
+                </div>
+
+                <div class="journal-form-field journal-form-full">
+                    <label for="journalName">Nama Jurnal *</label>
+                    <input type="text" id="journalName" required maxlength="200" placeholder="Masukkan nama jurnal">
+                </div>
+
+                <div class="journal-form-grid">
+                    <div class="journal-form-field">
+                        <label for="journalYear">Tahun Terbit *</label>
+                        <input type="number" id="journalYear" required min="1800" max="2100" placeholder="2025">
+                    </div>
+
+                    <div class="journal-form-field">
+                        <label for="journalVolume">Volume</label>
+                        <input type="text" id="journalVolume" maxlength="30" placeholder="12">
+                    </div>
+
+                    <div class="journal-form-field">
+                        <label for="journalIssue">Nomor</label>
+                        <input type="text" id="journalIssue" maxlength="30" placeholder="2">
+                    </div>
+
+                    <div class="journal-form-field">
+                        <label for="journalPages">Halaman</label>
+                        <input type="text" id="journalPages" maxlength="50" placeholder="100–115">
+                    </div>
+                </div>
+
+                <div class="journal-form-field journal-form-full">
+                    <label for="journalDOI">Link DOI</label>
+                    <input type="text" id="journalDOI" maxlength="300" placeholder="https://doi.org/10.xxxx/xxxxx">
+                    <small>Masukkan URL DOI atau kode DOI artikel jika tersedia.</small>
+                </div>
+
+                <div class="journal-form-feedback" id="journalFormFeedback" role="status" aria-live="polite"></div>
+
+                <div class="journal-modal-actions">
+                    <button type="button" class="journal-cancel-button" id="cancelJournalModal">Batal</button>
+                    <button type="submit" class="journal-save-button">Simpan Artikel</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

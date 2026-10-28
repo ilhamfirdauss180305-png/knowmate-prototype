@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Referensi | KNOWMATE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .detail-page {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 24px;
+        }
+
+        .detail-back {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #7655d9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .detail-panel {
+            background: #fff;
+            border: 1px solid #e8e5ef;
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.04);
+        }
+
+        .detail-type {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #f0eaff;
+            color: #7655d9;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .detail-panel h1 {
+            margin: 18px 0 10px;
+            font-size: 30px;
+        }
+
+        .detail-description {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .detail-metadata {
+            margin: 28px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row span:first-child {
+            color: #777;
+        }
+
+        .detail-row span:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .detail-source {
+            display: inline-block;
+            padding: 13px 20px;
+            border-radius: 10px;
+            background: #7655d9;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .detail-source:hover {
+            background: #6040bd;
+        }
+
+        .detail-note {
+            margin-top: 14px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .detail-page {
+                margin: 20px auto;
+                padding: 16px;
+            }
+
+            .detail-panel {
+                padding: 22px;
+            }
+
+            .detail-panel h1 {
+                font-size: 24px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .detail-row span:last-child {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="detail-page">
+        <a href="results.html" class="detail-back">
+            ← Kembali ke Hasil Referensi
+        </a>
+
+        <section class="detail-panel">
+            <span class="detail-type" id="detailType">REFERENSI</span>
+
+            <h1 id="detailTitle">Memuat referensi...</h1>
+
+            <p class="detail-description" id="detailDescription"></p>
+
+            <div class="detail-metadata">
+                <div class="detail-row">
+                    <span>Penulis</span>
+                    <span id="detailAuthor">Belum tersedia</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Tahun terbit</span>
+                    <span id="detailYear">Belum tersedia</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Penerbit / Jurnal</span>
+                    <span id="detailPublisher">Belum tersedia</span>
+                </div>
+            </div>
+
+            <a
+                href="#"
+                class="detail-source"
+                id="detailSource"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+            >
+                Buka Sumber Asli ↗
+            </a>
+
+            <p class="detail-note" id="detailNote">
+                Tautan sumber asli akan ditampilkan setelah URL referensi diverifikasi.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const references = {
+            "1": {
+                title: "Pengantar Psikologi",
+                type: "BUKU",
+                description: "Buku pengantar untuk memahami konsep dasar dalam ilmu psikologi.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            },
+            "2": {
+                title: "Psikologi Belajar",
+                type: "BUKU",
+                description: "Referensi mengenai konsep dan proses belajar dalam perspektif psikologi.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            },
+            "3": {
+                title: "Psikologi Sosial",
+                type: "BUKU",
+                description: "Referensi mengenai hubungan antara individu, kelompok, dan lingkungan sosial.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            },
+            "4": {
+                title: "Psikologi Kognitif",
+                type: "BUKU",
+                description: "Referensi mengenai proses kognitif seperti perhatian, persepsi, dan memori.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            },
+            "5": {
+                title: "Psikologi Klinis",
+                type: "BUKU",
+                description: "Referensi mengenai bidang psikologi klinis dan pemahaman masalah psikologis.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            },
+            "6": {
+                title: "Psikologi Islam",
+                type: "BUKU",
+                description: "Referensi mengenai kajian psikologi yang dikaitkan dengan perspektif Islam.",
+                author: "Belum tersedia",
+                year: "Belum tersedia",
+                publisher: "Belum tersedia",
+                url: ""
+            }
+        };
+
+        const id = new URLSearchParams(window.location.search).get("id");
+        const item = references[id];
+
+        if (item) {
+            document.title = item.title + " | KNOWMATE";
+
+            document.getElementById("detailTitle").textContent = item.title;
+            document.getElementById("detailType").textContent = item.type;
+            document.getElementById("detailDescription").textContent = item.description;
+            document.getElementById("detailAuthor").textContent = item.author;
+            document.getElementById("detailYear").textContent = item.year;
+            document.getElementById("detailPublisher").textContent = item.publisher;
+
+            if (item.url) {
+                const source = document.getElementById("detailSource");
+                source.href = item.url;
+                source.hidden = false;
+                document.getElementById("detailNote").textContent =
+                    "Tautan menuju sumber asli referensi.";
+            }
+        } else {
+            document.getElementById("detailTitle").textContent =
+                "Referensi tidak ditemukan";
+
+            document.getElementById("detailDescription").textContent =
+                "Referensi ini belum tersedia. Silakan kembali ke halaman hasil pencarian.";
+        }
+    </script>
+</body>
+</html>

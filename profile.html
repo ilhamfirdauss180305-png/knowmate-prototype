@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Saya - KnowMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page profile-page">
+
+    <!-- HEADER KHUSUS HP -->
+    <header class="mobile-header">
+        <button
+            type="button"
+            class="menu-button"
+            id="menuButton"
+            aria-label="Buka menu"
+        >
+            ☰
+        </button>
+
+        <div class="mobile-logo">KnowMate</div>
+
+        <a href="profile.html" class="mobile-profile">👤</a>
+    </header>
+
+    <!-- SIDEBAR GLOBAL -->
+    <aside class="sidebar" id="mainSidebar">
+
+        <button
+            type="button"
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            title="Buka/Tutup Sidebar"
+        >
+            ☰
+        </button>
+
+        <div class="sidebar-logo">
+            <span class="sidebar-logo-text">KnowMate</span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="profile.html" class="sidebar-link active">
+                <span class="sidebar-icon">👤</span>
+                <span class="sidebar-text">Profil</span>
+            </a>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <span class="sidebar-icon">📚</span>
+                <span class="sidebar-text">Buku</span>
+            </a>
+
+            <a href="saved-books.html" class="sidebar-link">
+                <span class="sidebar-icon">🔖</span>
+                <span class="sidebar-text">Buku Tersimpan</span>
+            </a>
+
+            <a href="journals.html" class="sidebar-link">
+                <span class="sidebar-icon">📄</span>
+                <span class="sidebar-text">Artikel Jurnal</span>
+            </a>
+            
+            <a href="discussion.html" class="sidebar-link">
+                <span class="sidebar-icon">👥</span>
+                <span class="sidebar-text">Ruang Diskusi</span>
+            </a>
+
+            <a href="index.html" class="sidebar-link logout-link">
+                <span class="sidebar-icon">↪</span>
+                <span class="sidebar-text">Keluar</span>
+            </a>
+
+        </nav>
+    </aside>
+
+    <!-- KONTEN PROFIL -->
+    <main class="main-content profile-main">
+
+        <!-- HEADER PROFIL -->
+        <section class="profile-hero">
+
+            <div class="profile-hero-avatar">
+                <img
+                    id="profileAvatarImage"
+                    src="assets/avatars/avatar-1.png"
+                    alt="Avatar profil"
+                >
+            </div>
+
+            <div class="profile-hero-info">
+                <h1 id="profileDisplayName">Nama Mahasiswa</h1>
+
+                <p id="profileDisplayStudy">
+                    Mahasiswa Psikologi - Semester 1
+                </p>
+            </div>
+
+<div class="profile-hero-actions">
+    <button type="button" class="profile-edit-button" id="openEditProfile">
+        <span>✎</span> Edit Profil
+    </button>
+
+    <button type="button" class="profile-password-button" id="openChangePassword">
+        Ubah Password
+    </button>
+
+        </section>
+
+        <!-- STATISTIK AKTIVITAS -->
+        <section class="profile-statistics">
+
+            <article class="profile-stat-card">
+                <div class="profile-stat-icon book-stack-icon" aria-label="Buku bertumpuk"></div>
+
+                <div class="profile-stat-info">
+                    <strong id="sharedReferenceCount">0</strong>
+                    <span>Referensi Dibagikan</span>
+                </div>
+            </article>
+
+            <article class="profile-stat-card">
+                <div class="profile-stat-icon">💬</div>
+
+                <div class="profile-stat-info">
+                    <strong id="discussionContributionCount">0</strong>
+                    <span>Kontribusi Diskusi</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- RIWAYAT REFERENSI -->
+        <section class="profile-history">
+
+            <h2>Riwayat &amp; Koleksi</h2>
+
+            <div class="profile-history-heading">
+                <h3>Buku yang Saya Bagikan</h3>
+            </div>
+
+            <div
+                class="profile-shared-books"
+                id="profileSharedBooks"
+            >
+                <!-- Riwayat referensi akan dimuat melalui JavaScript -->
+            </div>
+
+            <div
+                class="profile-empty-state"
+                id="profileEmptyState"
+            >
+                <div class="profile-stat-icon book-stack-icon" aria-label="Buku bertumpuk"></div>
+
+                <h3>Belum Ada Buku yang Dibagikan</h3>
+
+                <p>
+                    Referensi yang kamu bagikan akan muncul di sini.
+                </p>
+
+                <a href="dashboard.html" class="profile-add-reference">
+                    Tambah Referensi
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- MODAL EDIT PROFIL -->
+<div class="profile-modal-overlay" id="editProfileModal">
+
+    <section
+        class="profile-edit-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="editProfileTitle"
+    >
+
+        <button
+            type="button"
+            class="profile-modal-close"
+            id="closeEditProfile"
+            aria-label="Tutup modal"
+        >
+            ×
+        </button>
+
+        <form id="editProfileForm">
+
+            <div class="profile-modal-columns">
+
+                <!-- KOLOM KIRI -->
+                <div class="profile-modal-left">
+
+                    <div class="avatar-picker">
+
+                        <img
+                            src="assets/avatars/avatar-1.png"
+                            alt="Avatar pilihan"
+                            id="editAvatarPreview"
+                        >
+
+                        <h3 id="editProfileTitle">Pilih Avatar</h3>
+
+                        <div class="avatar-options">
+
+                            <button
+                                type="button"
+                                class="avatar-option selected"
+                                data-avatar="assets/avatars/avatar-1.png"
+                                aria-label="Pilih avatar 1"
+                            >
+                                <img
+                                    src="assets/avatars/avatar-1.png"
+                                    alt="Avatar 1"
+                                >
+                            </button>
+
+                            <button
+                                type="button"
+                                class="avatar-option"
+                                data-avatar="assets/avatars/avatar-2.png"
+                                aria-label="Pilih avatar 2"
+                            >
+                                <img
+                                    src="assets/avatars/avatar-2.png"
+                                    alt="Avatar 2"
+                                >
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-modal-field">
+                        <label for="editProfileStudy">
+                            Program Studi
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProfileStudy"
+                            required
+                        >
+                    </div>
+
+                    <div class="profile-modal-field">
+                        <label for="editProfileSemester">
+                            Semester
+                        </label>
+
+                        <select
+                            id="editProfileSemester"
+                            required
+                        >
+                            <option value="1">Semester 1</option>
+                            <option value="2">Semester 2</option>
+                            <option value="3">Semester 3</option>
+                            <option value="4">Semester 4</option>
+                            <option value="5">Semester 5</option>
+                            <option value="6">Semester 6</option>
+                            <option value="7">Semester 7</option>
+                        </select>
+                    </div>
+
+                    <div class="profile-modal-field">
+                        <label for="editProfileUniversity">
+                            Universitas
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProfileUniversity"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <!-- KOLOM KANAN -->
+                <div class="profile-modal-right">
+
+                    <div class="profile-modal-field">
+                        <label for="editProfileName">
+                            Nama Lengkap
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editProfileName"
+                            required
+                        >
+                    </div>
+
+                    <div class="profile-modal-field">
+                        <label for="editProfileEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editProfileEmail"
+                            required
+                        >
+                    </div>
+
+                    <div
+                        class="profile-modal-feedback"
+                        id="editProfileFeedback"
+                        role="status"
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <div class="profile-modal-actions">
+
+                <button
+                    type="button"
+                    class="profile-modal-cancel"
+                    id="cancelEditProfile"
+                >
+                    Batal
+                </button>
+
+                <button
+                    type="submit"
+                    class="profile-modal-save"
+                >
+                    Simpan Perubahan
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+<!-- MODAL UBAH PASSWORD -->
+<div class="profile-modal-overlay" id="changePasswordModal">
+    <section class="profile-edit-modal password-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="changePasswordTitle">
+
+        <button type="button"
+            class="profile-modal-close"
+            id="closeChangePassword"
+            aria-label="Tutup modal">×</button>
+
+        <div class="password-modal-heading">
+            <div class="password-modal-icon">🔒</div>
+            <h2 id="changePasswordTitle">Ubah Password</h2>
+            <p>Gunakan password yang kuat untuk menjaga keamanan akunmu.</p>
+        </div>
+
+        <form id="changePasswordForm">
+            <div class="profile-modal-field">
+                <label for="oldPassword">Password Lama</label>
+                <input
+                    type="password"
+                    id="oldPassword"
+                    placeholder="Masukkan password lama"
+                    autocomplete="current-password"
+                    required>
+            </div>
+
+            <div class="profile-modal-field">
+                <label for="newPassword">Password Baru</label>
+                <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Minimal 8 karakter"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required>
+            </div>
+
+            <div class="profile-modal-field">
+                <label for="confirmNewPassword">Konfirmasi Password Baru</label>
+                <input
+                    type="password"
+                    id="confirmNewPassword"
+                    placeholder="Ulangi password baru"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required>
+            </div>
+
+            <div class="profile-modal-feedback"
+                id="changePasswordFeedback"
+                role="status"
+                aria-live="polite"></div>
+
+            <div class="profile-modal-actions">
+                <button type="button"
+                    class="profile-modal-cancel"
+                    id="cancelChangePassword">Batal</button>
+
+                <button type="submit"
+                    class="profile-modal-save">Simpan Password</button>
+            </div>
+        </form>
+    </section>
+</div>
+<!-- AKHIR MODAL UBAH PASSWORD -->
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buku Tersimpan - KnowMate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- HEADER HP -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+        <div class="mobile-logo">KnowMate</div>
+
+        <a href="profile.html" class="mobile-profile">👤</a>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="mainSidebar">
+
+        <button
+            type="button"
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            title="Buka/Tutup Sidebar"
+        >
+            ☰
+        </button>
+
+        <div class="sidebar-logo">
+            <span class="sidebar-logo-text">KnowMate</span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="profile.html" class="sidebar-link">
+                <span class="sidebar-icon">👤</span>
+                <span class="sidebar-text">Profil</span>
+            </a>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <span class="sidebar-icon">📚</span>
+                <span class="sidebar-text">Buku</span>
+            </a>
+
+            <a href="saved-books.html" class="sidebar-link active">
+                <span class="sidebar-icon">🔖</span>
+                <span class="sidebar-text">Buku Tersimpan</span>
+            </a>
+
+            <a href="journals.html" class="sidebar-link">
+                <span class="sidebar-icon">📄</span>
+                <span class="sidebar-text">Artikel Jurnal</span>
+            </a>
+
+            <a href="discussion.html" class="sidebar-link">
+                <span class="sidebar-icon">👥</span>
+                <span class="sidebar-text">Ruang Diskusi</span>
+            </a>
+
+            <a href="index.html" class="sidebar-link logout-link">
+                <span class="sidebar-icon">↪</span>
+                <span class="sidebar-text">Keluar</span>
+            </a>
+
+        </nav>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="main-content saved-books-page">
+
+        <section class="saved-books-header">
+            <div>
+                <span class="saved-books-label">KOLEKSI PRIBADI</span>
+                <h1>Buku Tersimpan 🔖</h1>
+                <p>
+                    Kumpulan buku dan referensi yang kamu simpan.
+                </p>
+            </div>
+        </section>
+
+        <section class="saved-books-section">
+
+            <div class="saved-books-heading">
+                <h2>Koleksi Buku Kamu</h2>
+                <span id="savedBookCount">0 buku</span>
+            </div>
+
+            <div class="book-container" id="savedBookContainer">
+                <!-- Buku ditampilkan melalui JavaScript -->
+            </div>
+
+            <div class="saved-books-empty" id="savedBooksEmpty">
+                <div class="saved-empty-icon">🔖</div>
+                <h3>Belum Ada Buku Tersimpan</h3>
+                <p>
+                    Tekan ikon bookmark pada kartu buku untuk
+                    menambahkannya ke koleksi ini.
+                </p>
+                <a href="dashboard.html" class="saved-back-button">
+                    Cari Buku
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

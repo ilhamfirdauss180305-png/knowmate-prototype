@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KnowMate - Beranda</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header class="mobile-header">
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+        <div class="mobile-logo">
+            KnowMate
+        </div>
+
+        <a href="profile.html" class="mobile-profile">
+            ◯
+        </a>
+
+    </header>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+<aside class="sidebar" id="mainSidebar">
+
+    <button
+        type="button"
+        class="sidebar-toggle"
+        id="sidebarToggle"
+        title="Buka/Tutup Sidebar"
+    >
+        ☰
+    </button>
+
+    <div class="sidebar-logo">
+        <span class="sidebar-logo-text">KnowMate</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="profile.html" class="sidebar-link">
+            <span class="sidebar-icon">👤</span>
+            <span class="sidebar-text">Profil</span>
+        </a>
+
+        <a href="dashboard.html" class="sidebar-link active">
+            <span class="sidebar-icon">📚</span>
+            <span class="sidebar-text">Buku</span>
+        </a>
+
+        <a href="saved-books.html" class="sidebar-link">
+            <span class="sidebar-icon">🔖</span>
+            <span class="sidebar-text">Buku Tersimpan</span>
+        </a>
+        
+        <a href="journals.html" class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            <span class="sidebar-text">Artikel Jurnal</span>
+        </a>
+
+        <a href="discussion.html" class="sidebar-link">
+            <span class="sidebar-icon">👥</span>
+            <span class="sidebar-text">Ruang Diskusi</span>
+        </a>
+
+        <a href="index.html" class="sidebar-link logout-link">
+            <span class="sidebar-icon">↪</span>
+            <span class="sidebar-text">Keluar</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             WELCOME HEADER
+        ================================================== -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-text">
+
+                <h1>
+                    Halo <span id="userName">Mahasiswa</span>,
+                    Selamat Datang di KnowMate!
+                </h1>
+
+                <p>
+                    Mau cari buku apa hari ini?
+                </p>
+
+            </div>
+
+
+            <!-- ILUSTRASI BUKU -->
+
+            <div class="welcome-illustration">
+
+                <div class="laptop">
+
+                    <div class="laptop-screen">
+
+                        <div class="screen-book">
+                            📖
+                        </div>
+
+                    </div>
+
+                    <div class="laptop-base"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEARCH AREA
+        ================================================== -->
+
+        <section class="search-area">
+
+
+            <!-- PROGRAM STUDI -->
+
+<div class="search-field">
+    <label for="programStudy">Program Studi</label>
+    <input
+        type="text"
+        id="programStudy"
+        placeholder="Ketik program studi"
+        autocomplete="off"
+    >
+</div>
+
+            <!-- MATA KULIAH -->
+
+<div class="search-field">
+    <label for="course">Mata Kuliah</label>
+    <input
+        type="text"
+        id="course"
+        placeholder="Ketik mata kuliah"
+        autocomplete="off"
+    >
+</div>
+
+            <!-- SEARCH BUTTON -->
+
+            <button
+                class="search-button"
+                id="searchButton"
+            >
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                Search
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEMESTER
+        ================================================== -->
+
+        <section class="semester-section">
+
+            <div class="section-title">
+
+                Pilih Semester
+
+            </div>
+
+
+            <div class="semester-list">
+
+
+                <button
+                    class="semester-button"
+                    data-semester="1"
+                >
+                    Semester 1
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="2"
+                >
+                    Semester 2
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="3"
+                >
+                    Semester 3
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="4"
+                >
+                    Semester 4
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="5"
+                >
+                    Semester 5
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="6"
+                >
+                    Semester 6
+                </button>
+
+
+                <button
+                    class="semester-button"
+                    data-semester="7"
+                >
+                    Semester 7
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REKOMENDASI
+        ================================================== -->
+
+        <section class="recommendation-section">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Rekomendasi Buku Terlaris
+                </h2>
+
+            </div>
+
+
+            <!-- BOOK LIST -->
+
+            <div
+                class="book-container"
+                id="bookContainer"
+            >
+
+
+                <!-- BUKU 1 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-purple">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 1</span>
+
+        <a href="detail.html?id=1" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+                <!-- BUKU 2 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-pink">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 2</span>
+
+        <a href="detail.html?id=2" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+                <!-- BUKU 3 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-blue">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 3</span>
+
+        <a href="detail.html?id=3" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+                <!-- BUKU 4 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-pink">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 4</span>
+
+        <a href="detail.html?id=4" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+                <!-- BUKU 5 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-teal">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 5</span>
+
+        <a href="detail.html?id=5" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+                <!-- BUKU 6 -->
+
+                
+<div class="book-card">
+
+    <div class="book-cover cover-purple">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 6</span>
+
+        <a href="detail.html?id=6" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+                <!-- BUKU 7 -->
+
+                  
+<div class="book-card">
+
+    <div class="book-cover cover-blue">
+        <div class="book-design">
+            <div class="book-line line-one"></div>
+            <div class="book-line line-two"></div>
+        </div>
+    </div>
+
+    <div class="book-information">
+
+        <h3>Judul Buku</h3>
+
+        <p>Nama Penulis</p>
+
+        <span>Semester 7</span>
+
+        <a href="detail.html?id=7" class="book-detail-link">
+            Lihat Referensi
+        </a>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TAMBAH REFERENSI
+        ================================================== -->
+
+    <button
+    type="button"
+    class="add-reference-button"
+    id="openReferenceModal"
+>
+    <span>+</span>
+    Tambah Referensi
+</button>
+
+
+    </main>
+
+<!-- =========================================
+     MODAL TAMBAH REFERENSI
+     ========================================= -->
+
+<div
+    class="reference-modal-overlay"
+    id="referenceModal"
+>
+
+    <div class="reference-modal">
+
+
+        <!-- HEADER -->
+
+        <div class="reference-modal-header">
+
+            <h2>
+                Tambah Referensi Buku
+            </h2>
+
+            <button
+                type="button"
+                class="reference-modal-close"
+                id="closeReferenceModal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="referenceForm">
+
+
+            <div class="reference-form-layout">
+
+
+                <!-- KOLOM KIRI -->
+
+                <div class="reference-form-left">
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceStudy">
+                            Program Studi
+                        </label>
+
+                        <input
+                            type="text"
+                            id="referenceStudy"
+                            placeholder="Contoh: Psikologi"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceCourse">
+                            Mata Kuliah
+                        </label>
+
+                        <input
+                            type="text"
+                            id="referenceCourse"
+                            placeholder="Contoh: Psikologi Kognitif"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceDescription">
+                            Lainnya
+                        </label>
+
+                        <textarea
+                            id="referenceDescription"
+                            placeholder="Deskripsi buku, dll"
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- KOLOM KANAN -->
+
+                <div class="reference-form-right">
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceTitle">
+                            Judul Buku
+                        </label>
+
+                        <input
+                            type="text"
+                            id="referenceTitle"
+                            placeholder="Masukkan judul buku"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceAuthor">
+                            Nama Penulis
+                        </label>
+
+                        <input
+                            type="text"
+                            id="referenceAuthor"
+                            placeholder="Masukkan nama penulis"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="reference-small-fields">
+
+
+                        <div class="reference-form-group">
+
+                            <label for="referenceYear">
+                                Tahun Terbit
+                            </label>
+
+                            <input
+                                type="number"
+                                id="referenceYear"
+                                placeholder="2026"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="reference-form-group">
+
+                            <label for="referenceEdition">
+                                Edisi
+                            </label>
+
+                            <input
+                                type="text"
+                                id="referenceEdition"
+                                placeholder="Edisi 2"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="reference-small-fields">
+
+
+                        <div class="reference-form-group">
+
+                            <label for="referencePublisher">
+                                Penerbit
+                            </label>
+
+                            <input
+                                type="text"
+                                id="referencePublisher"
+                                placeholder="Nama penerbit"
+                            >
+
+                        </div>
+
+
+                        <div class="reference-form-group">
+
+                            <label for="referenceCity">
+                                Kota Terbit
+                            </label>
+
+                            <input
+                                type="text"
+                                id="referenceCity"
+                                placeholder="Kota"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="reference-form-group">
+
+                        <label for="referenceUrl">
+                            URL/Tautan Referensi
+                            <span>(Opsional)</span>
+                        </label>
+
+                        <input
+                            type="url"
+                            id="referenceUrl"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="reference-modal-footer">
+
+                <button
+                    type="button"
+                    class="reference-cancel-button"
+                    id="cancelReferenceModal"
+                >
+                    Batal
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="reference-submit-button"
+                >
+                    Simpan & Bagikan
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
